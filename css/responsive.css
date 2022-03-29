@@ -1,0 +1,137 @@
+/******************************************
+    Version: 1.0
+/****************************************** */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.inner-box-title{
+		font-size: 24px;
+	}
+
+	/* header part */
+	.header_title {
+		height: 125px;
+		margin-top: 40px;
+	}
+		
+	.container_header_title h3{
+		font-size: 36px;
+		padding-left: 20px;
+	}
+	
+	/* Section */
+	
+	.section_title {
+		height: 80px;
+	}
+		
+	.container_title h3{
+		font-size: 30px;
+		padding-left: 20px;
+	}
+	
+	/* Recipe part */
+	.recipe-inner-box{
+		padding: 12.5px 20px 12.5px 20px;
+	}
+	
+	.recipe-inner-box li{ 
+		font-size: 18px;
+		line-height: 20px;
+		padding-top: 7.5px;
+		padding-bottom: 7.5px
+	}
+	
+}
+@media (max-width: 767px) {
+	/* .body{
+		width:100%;
+	} */
+
+	/* header part */
+	.header_title {
+		height: 100px;
+		margin-top: 30px;
+	}
+		
+	.container_header_title h3{
+		font-size: 30px;
+		padding-left: 15px;
+	}
+	
+	/* Section */
+	
+	.section_title {
+		height: 60px;
+	}
+		
+	.container_title h3{
+		font-size: 24px;
+		padding-left: 15px;
+	}
+	
+	/* Recipe part */
+	.recipe-inner-box{
+		padding: 10px 15px 10px 15px;
+	}
+	
+	.recipe-inner-box li{ 
+		font-size: 14px;
+		line-height: 16px;
+		padding-top: 5px;
+		padding-bottom: 5px
+	}
+}
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+	.body{
+		width:100%;
+	}
+
+	/* header part */
+	.header_title {
+		height: 75px;
+		margin-top: 20px;
+	}
+		
+	.container_header_title h3{
+		font-size: 24px;
+		padding-left: 10px;
+	}
+	
+	/* Section */
+	
+	.section_title {
+		height: 40px;
+	}
+		
+	.container_title h3{
+		font-size: 18px;
+		padding-left: 10px;
+	}
+	
+	/* Recipe part */
+
+	/* Recipe part */
+	.container_list_recipe{
+		display: grid;
+		grid-template-columns: 100%;
+	}
+
+	.left{
+		border-right:0rem solid #151f26;
+		padding: 10px 10px 0px 10px;
+	}
+
+	.right{
+		padding: 0px 10px 10px 10px;
+	}
+	
+	.recipe-inner-box li{ 
+		font-size: 14px;
+		line-height: 16px;
+		padding-top: 5px;
+		padding-bottom: 5px
+	}
+	
+}
