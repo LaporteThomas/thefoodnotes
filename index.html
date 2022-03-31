@@ -44,11 +44,11 @@
 					<button id="sauce" class="inner-box-title">les sauces.</button>
 				</div>
 			</div>
-			
+
 			<div class="box-list">
-				<div id="recipe_ptitdej_container" class="section-recipe recipe-ptitdej" style="display: none;">
-					<div class="container_list_recipe">
-						<ul class="recipe-inner-box left">
+				<div id="recipe-ptitdej-container" class="section-recipe recipe-ptitdej" style="display: none;">
+					<div class="container-list-recipe">
+						<ul class="recipe-inner-box">
 							<li><a href="./recette/ptitdej/granola.html">﻿le granola<span style="color:#fec876;">.</span></a></li>
 							<li><a href="./recette/ptitdej/painaulait.html">les pains au lait<span style="color:#fec876;">.</span></a></li>
 							<li><a href="./recette/ptitdej/painperdu.html">le pain perdu<span style="color:#fec876;">.</span></a></li>
@@ -58,9 +58,9 @@
 					</div><!-- end container -->
 				</div><!-- end section -->
 
-				<div id="recipe_gouter_container" class="section-recipe recipe-gouter" style="display: none;">
-					<div class="container_list_recipe">
-						<ul class="recipe-inner-box left">
+				<div id="recipe-gouter-container" class="section-recipe recipe-gouter" style="display: none;">
+					<div class="container-list-recipe">
+						<ul class="recipe-inner-box">
 							<li><a href="./recette/gouter/brownie.html">﻿le brownie<span style="color:#ddb792;">.</span></a></li>
 							<li><a href="./recette/gouter/canistrelliaucitron.html">les canistrellis au citron<span style="color:#ddb792;">.</span></a></li>
 							<li><a href="./recette/gouter/chocolatviennois.html">le chocolat viennois<span style="color:#ddb792;">.</span></a></li>
@@ -77,10 +77,9 @@
 					</div><!-- end container -->
 				</div><!-- end section -->
 
-
-				<div id="recipe_apero_container" class="section-recipe recipe-apero" style="display: none;">
-					<div class="container_list_recipe">
-						<ul class="recipe-inner-box left">
+				<div id="recipe-apero-container" class="section-recipe recipe-apero" style="display: none;">
+					<div class="container-list-recipe">
+						<ul class="recipe-inner-box">
 							<li><a href="./recette/apero/arancini.html">﻿les arancinis<span style="color:#d5dd9d;">.</span></a></li>
 							<li><a href="./recette/apero/cakechevrecourgettetomate.html">le cake chèvre courgette tomage<span style="color:#d5dd9d;">.</span></a></li>
 							<li><a href="./recette/apero/chipslegume.html">les chips de légumes<span style="color:#d5dd9d;">.</span></a></li>
@@ -99,9 +98,8 @@
 					</div><!-- end container -->
 				</div><!-- end section -->
 
-
-				<div id="recipe_plat_container" class="section-recipe recipe-plat" style="display: none;">
-					<div class="container_list_recipe">
+				<div id="recipe-plat-container" class="section-recipe recipe-plat" style="display: none;">
+					<div class="container-list-recipe">
 						<ul class="recipe-inner-box">
 							<li><a href="./recette/plat/bagel.html">﻿le bagel<span style="color:#f58c74;">.</span></a></li>
 							<li><a href="./recette/plat/bahnmi.html">le bahn mi<span style="color:#f58c74;">.</span></a></li>
@@ -164,9 +162,9 @@
 					</div><!-- end container -->
 				</div><!-- end section -->
 
-				<div id="recipe_dessert_container" class="section-recipe recipe-dessert" style="display: none;">
-					<div class="container_list_recipe">
-						<ul class="recipe-inner-box left">
+				<div id="recipe-dessert-container" class="section-recipe recipe-dessert" style="display: none;">
+					<div class="container-list-recipe">
+						<ul class="recipe-inner-box">
 							<li><a href="./recette/dessert/carrotcake.html">﻿le carrot cake<span style="color:#8ac5ce;">.</span></a></li>
 							<li><a href="./recette/dessert/cheesecake.html">le cheesecake<span style="color:#8ac5ce;">.</span></a></li>
 							<li><a href="./recette/dessert/crumble.html">le crumble<span style="color:#8ac5ce;">.</span></a></li>
@@ -183,157 +181,15 @@
 						</ul>
 					</div><!-- end container -->
 				</div><!-- end section -->
+
 			</div>
 		</div>
 	</div>
 
 	<!-- ALL JS FILES -->
 	<script src="js/all.js"></script>
-	<script src="js/all.js"></script>
-	<script>
-	let countButtonPtitDej = false;
-	let countButtonGouter = false;
-	let countButtonApero = false;
-	let countButtonPlat = false;
-	let countButtonDessert = false;
-	let countButtonSauce = false;
-	$( document ).ready(function() {
-		$("#ptitdej").on("click",function(){
-			if (countButtonPtitDej == false){
-				$("#recipe_ptitdej_container").toggle();
-				document.getElementById("ptitdej").style.backgroundColor = "#fec876";
-				countButtonPtitDej = true;
-			}
-			if (countButtonGouter){
-				$("#recipe_gouter_container").toggle();
-				countButtonGouter = false;
-				document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonApero){
-				$("#recipe_apero_container").toggle();
-				countButtonApero = false;
-				document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonPlat){
-				$("#recipe_plat_container").toggle();
-				countButtonPlat = false;
-				document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonDessert){
-				$("#recipe_dessert_container").toggle();
-				countButtonDessert = false;
-				document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-			}
-		});
-		$("#gouter").on("click",function(){
-			if (countButtonGouter == false){
-				$("#recipe_gouter_container").toggle();
-				countButtonGouter = true;
-				document.getElementById("gouter").style.backgroundColor = "#ddb792";
-			}
-			if (countButtonPtitDej){
-				$("#recipe_ptitdej_container").toggle();
-				countButtonPtitDej = false;
-				document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonApero){
-				$("#recipe_apero_container").toggle();
-				countButtonApero = false;
-				document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonPlat){
-				$("#recipe_plat_container").toggle();
-				countButtonPlat = false;
-				document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonDessert){
-				$("#recipe_dessert_container").toggle();
-				countButtonDessert = false;
-				document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-			}
-		});
-		$("#apero").on("click",function(){
-			if (countButtonApero == false){
-				$("#recipe_apero_container").toggle();
-				countButtonApero = true;
-				document.getElementById("apero").style.backgroundColor = "#d5dd9d";
-			}
-			if (countButtonPtitDej){
-				$("#recipe_ptitdej_container").toggle();
-				countButtonPtitDej = false;
-				document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonGouter){
-				$("#recipe_gouter_container").toggle();
-				countButtonGouter = false;
-				document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonPlat){
-				$("#recipe_plat_container").toggle();
-				countButtonPlat = false;
-				document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonDessert){
-				$("#recipe_dessert_container").toggle();
-				countButtonDessert = false;
-				document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-			}
-		});
-		$("#plat").on("click",function(){
-			if (countButtonPlat == false){
-				$("#recipe_plat_container").toggle();
-				countButtonPlat = true;
-				document.getElementById("plat").style.backgroundColor = "#f58c74";
-			}	
-			if (countButtonPtitDej){
-				$("#recipe_ptitdej_container").toggle();
-				countButtonPtitDej = false;
-				document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonGouter){
-				$("#recipe_gouter_container").toggle();
-				countButtonGouter = false;
-				document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonApero){
-				$("#recipe_apero_container").toggle();
-				countButtonApero = false;
-				document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonDessert){
-				$("#recipe_dessert_container").toggle();
-				countButtonDessert = false;
-				document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-			}
-		});
-		$("#dessert").on("click",function(){
-			if (countButtonDessert == false){
-				$("#recipe_dessert_container").toggle();
-				countButtonDessert = true;
-				document.getElementById("dessert").style.backgroundColor = "#8ac5ce";
-			}
-			if (countButtonPtitDej){
-				$("#recipe_ptitdej_container").toggle();
-				countButtonPtitDej = false;
-				document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonGouter){
-				$("#recipe_gouter_container").toggle();
-				countButtonGouter = false;
-				document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonApero){
-				$("#recipe_apero_container").toggle();
-				countButtonApero = false;
-				document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-			}
-			if (countButtonPlat){
-				$("#recipe_plat_container").toggle();
-				countButtonPlat = false;
-				document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-			}
-		});
-	});
-	</script>
+
+	<script src="js/custom.js"></script>
+
 </body>
 </html>
