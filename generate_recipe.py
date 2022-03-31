@@ -11,7 +11,7 @@ def create_html_recipe(recipe, sectionId, color):
         end_html(f, recipe.source)
         f.close()
 
-def initiate_html(recipe, color):
+def write_head(recipe, color):
     f = open(recipe + ".html", "w")
     f.write("<!DOCTYPE html>\n")
     f.write("<html lang=\"en\">\n\n")
@@ -30,26 +30,27 @@ def initiate_html(recipe, color):
     f.write("\t<meta name=\"author\" content=\"\">\n\n")
 
     f.write("\t<!-- Site Icons -->\n")
-    f.write("\t<link rel=\"shortcut icon\" href=\"../../images/favicon.ico\" type=\"image/x-icon\" />\n")
-    f.write("\t<link rel=\"apple-touch-icon\" href=\"../../images/apple-touch-icon.png\">\n\n")
+    f.write("\t<link rel=\"shortcut icon\" href=\"images/favicon.ico\" type=\"image/x-icon\" />\n")
+    f.write("\t<link rel=\"apple-touch-icon\" href=\"images/apple-touch-icon.png\">\n\n")
 
     f.write("\t<!-- Site CSS -->\n")
-    f.write("\t<link rel=\"stylesheet\" href=\"../../style_recipe.css\">\n")
+    f.write("\t<link rel=\"stylesheet\" href=\"style.css\">\n")
     f.write("\t<!-- Responsive CSS -->\n")
     f.write("\t<link rel=\"stylesheet\" href=\"../../css/responsive_recipe.css\">\n\n")
 
     f.write("</head>\n")
-    f.write("<body>\n\n")
-    # f.write("<body style=\"background-color: #" + color + ";\">\n\n")
 
     return f
 
 def write_title(f, name, color):
-    f.write("\t<div id=\"title\" class=\"header_title\">\n")
-    f.write("\t\t<div class=\"container_header_title\">\n")
-    f.write("\t\t\t<h3> <a href=\"../../index.html\">" + name + "<span style=\"color:#" + color + ";\">.</span></a></h3>\n")
-    f.write("\t\t</div>\n")
-    f.write("\t</div>\n\n")
+    f.write("<body>\n\n")
+
+    f.write("\t<div class=\"box\">\n")
+    f.write("\t\t<div id=\"header\" class=\"header\">\n")
+    f.write("\t\t\t<div class=\"container-header\">\n")
+    f.write("\t\t\t\t<h3> <a href=\"../../index.html\">" + name + "<span style=\"color:#" + color + ";\">.</span></a></h3>\n")
+    f.write("\t\t\t</div>\n")
+    f.write("\t\t</div>\n\n")
 
 def write_info(f, infos, color):
     f.write("\t<div class=\"section-recipe\">\n")
