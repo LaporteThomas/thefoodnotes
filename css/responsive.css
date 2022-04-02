@@ -10,7 +10,8 @@
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 31px 62px 31px 62px;
+		margin: 62px;
+		padding-bottom: 124px;
 	}
 
 	.recipe-inner-box li{
@@ -27,7 +28,8 @@
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 25px 50px 25px 50px;
+		margin: 50px;
+		padding-bottom: 100px;
 	}	
 
 	.recipe-inner-box li{
@@ -38,13 +40,18 @@
 }
 
 @media (max-width:799px) and (orientation: landscape){
+	.header{
+		border-bottom: 2px solid #151f26;
+	}
+
 	.inner-box-title{
 		font-size: 14px;
 	}
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 15px 30px 15px 30px;
+		margin: 30px;
+		padding-bottom: 60px;
 	}	
 
 	.recipe-inner-box li{
@@ -55,6 +62,10 @@
 }
 
 @media (max-width:1919px) and (orientation: portrait){
+	.header{
+		border-bottom: 4px solid #151f26;
+	}
+
 	.section-title {
 		width: 100vw;
 		height: 5vh;
@@ -83,6 +94,8 @@
 		font-size: 30px;
 		padding-right: 31px;
 		padding-left: 31px;
+		border-bottom: 4px solid #151f26;
+		border-right: 4px solid #151f26;
 	}
 
 	.box-list{
@@ -94,7 +107,8 @@
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 31px 62px 31px 62px;
+		margin: 62px;
+		padding-bottom: 124px;
 	}
 
 	.recipe-inner-box li{
@@ -109,6 +123,10 @@
 }
 
 @media (max-width:1199px) and (orientation: portrait){
+	.header{
+		border-bottom: 3px solid #151f26;
+	}
+
 	.section-title {
 		width: 100vw;
 		height: 5vh;
@@ -137,6 +155,8 @@
 		font-size: 24px;
 		padding-right: 25px;
 		padding-left: 25px;
+		border-bottom: 3px solid #151f26;
+		border-right: 3px solid #151f26;
 	}
 
 	.box-list{
@@ -148,7 +168,8 @@
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 25px 50px 25px 50px;
+		margin: 50px;
+		padding-bottom: 100px;
 	}
 
 	.recipe-inner-box li{
@@ -163,6 +184,10 @@
 }
 
 @media (max-width:799px) and (orientation: portrait){
+	.header{
+		border-bottom: 2px solid #151f26;
+	}
+
 	.section-title {
 		width: 100vw;
 		height: 5vh;
@@ -188,9 +213,11 @@
 	}
 
 	.inner-box-title{
-		font-size: 14px;
-		padding-right: 15px;
-		padding-left: 15px;
+		font-size: 18px;
+		padding-right: 19px;
+		padding-left: 19px;
+		border-bottom: 2px solid #151f26;
+		border-right: 2px solid #151f26;
 	}
 
 	.box-list{
@@ -202,13 +229,14 @@
 
 	.recipe-inner-box{
 		list-style: none;
-		margin: 15px 30px 15px 30px;
+		margin: 38px;
+		padding-bottom: 76px;
 	}
 
 	.recipe-inner-box li{
-		font-size: 14px;
-		line-height: 16px;
-		padding-bottom: 15px;
+		font-size: 18px;
+		line-height: 20px;
+		padding-bottom: 19px;
 	}
 
 	.box-recipe{
