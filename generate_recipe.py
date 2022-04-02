@@ -3,7 +3,7 @@ from os import path
 
 def create_html_recipe(recipe, sectionId, color):
     if path.isfile("./recette/" + sectionId + "/" + recipe.namefile + ".html") == False:
-        f = initiate_html("./recette/" + sectionId + "/" + recipe.namefile, color)
+        f = write_head("./recette/" + sectionId + "/" + recipe.namefile, color)
         write_title(f, recipe.name, color)
         write_info(f, recipe.infos, color)
         write_ingredient_info(f, recipe.ingredient, color)
@@ -34,7 +34,7 @@ def write_head(recipe, color):
     f.write("\t<link rel=\"apple-touch-icon\" href=\"images/apple-touch-icon.png\">\n\n")
 
     f.write("\t<!-- Site CSS -->\n")
-    f.write("\t<link rel=\"stylesheet\" href=\"style.css\">\n")
+    f.write("\t<link rel=\"stylesheet\" href=\"../../style_recipe.css\">\n")
     f.write("\t<!-- Responsive CSS -->\n")
     f.write("\t<link rel=\"stylesheet\" href=\"../../css/responsive_recipe.css\">\n\n")
 
@@ -53,62 +53,75 @@ def write_title(f, name, color):
     f.write("\t\t</div>\n\n")
 
 def write_info(f, infos, color):
-    f.write("\t<div class=\"section-recipe\">\n")
-    f.write("\t\t<div class=\"container_info\" style=\"background-color: #" + color + ";\">\n")
+    f.write("\t\t<div class=\"box-recipe\">\n")
+    f.write("\t\t\t<div class=\"section-info\">\n")
+    f.write("\t\t\t\t<div class=\"container-info\" style=\"background-color: #" + color + ";\">\n")
     for index, (key, value) in enumerate(infos.items()):
-        if index != len(infos)-1:
-            write_block_info(f, key, value, True)
-        else:
-            write_block_info(f, key, value, False)
+            write_block_info(f, key, value)
+    
+    if len(infos) < 4:
+        for i in range(4-len(infos)):
+            f.write("\t\t\t\t\t<div class=\"infos-inner-box\">\n")
+            f.write("\t\t\t\t\t</div>\n")
 
-    f.write("\t\t</div><!-- end container -->\n")
+    f.write("\t\t\t\t</div><!-- end container -->\n")
+    f.write("\t\t\t</div><!-- end section -->\n\n")
 
-def write_block_info(f, info_type, info_quantity, with_border):
-    if with_border:
-        f.write("\t\t\t<div class=\"infos-inner-box left\">\n")
-    else:
-        f.write("\t\t\t<div class=\"infos-inner-box right\">\n")
-    f.write("\t\t\t\t<h2>" + info_type + "</h2>\n")
-    f.write("\t\t\t\t<p>" + info_quantity + "</p>\n")
-    f.write("\t\t\t</div>\n")
-
-    if with_border:
-        f.write("\t\t\t<div class = \"border-bottom\"></div>\n")
+def write_block_info(f, info_type, info_quantity):
+    f.write("\t\t\t\t\t<div class=\"infos-inner-box\">\n")
+    f.write("\t\t\t\t\t\t<div class=\"container-inner-box\">\n")
+    f.write("\t\t\t\t\t\t\t<h2>" + info_type + "</h2>\n")
+    f.write("\t\t\t\t\t\t\t<p>" + info_quantity + "</p>\n")
+    f.write("\t\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t</div>\n")
 
 
 def write_ingredient_info(f, ingredient, color):
-    f.write("\t\t<div class=\"container_ingredient\">\n")
-    f.write("\t\t\t<ul class=\"ingredient-inner-box\">\n")
-    f.write("\t\t\t\t<h2>les ingrédients<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t<div class=\"section-ingredient\">\n")
+    f.write("\t\t\t\t<div class=\"container-ingredient\">\n")
+    f.write("\t\t\t\t\t<div class=\"ingredient-title-inner-box\">\n")
+    f.write("\t\t\t\t\t\t<h2>les ingrédients<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t<div class=\"ingredient-list-inner-box\">\n")
+    f.write("\t\t\t\t\t\t<ul>\n")
 
     nb_ingredient = 0
     for list_ingredient in ingredient:
         for key, value in list_ingredient.items():
             if key == "title":
                 if nb_ingredient == 0:
-                    f.write("\t\t\t\t\t<li>" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
+                    f.write("\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
                     nb_ingredient += 1
                 else:
-                    f.write("\t\t\t\t\t<li style=\"padding-top:25px;\">" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
+                    f.write("\t\t\t\t\t\t\t<li style=\"padding-top:25px;\">" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
                     nb_ingredient += 1
             else:
-                f.write("\t\t\t\t\t<li>" + value + "<span style=\"font-weight:400;\"> " + key + "</li>\n")
+                f.write("\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:400;\"> " + key + "</li>\n")
                 nb_ingredient += 1
     
-    f.write("\t\t\t</ul>\n")
-    f.write("\t\t</div>\n")
+    f.write("\t\t\t\t\t\t</ul>\n")
+    f.write("\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t</div>\n")
+    f.write("\t\t\t</div>\n")
 
 def write_recipe_step(f, recipe_step, color):
-    f.write("\t\t<div class=\"container_step\">\n")
-    f.write("\t\t\t<ol class=\"step-inner-box\">\n")
-    f.write("\t\t\t\t<h2>la recette<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t<div class=\"section-recipe\">\n")
+    f.write("\t\t\t\t<div class=\"container-recipe\">\n")
+    f.write("\t\t\t\t\t<div class=\"recipe-title-inner-box\">\n")
+    f.write("\t\t\t\t\t\t<h2>la recette<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t<div class=\"recipe-list-inner-box\">\n")
+    f.write("\t\t\t\t\t\t<ol>\n")
 
     for step in recipe_step:
-        f.write("\t\t\t\t<li><span style=\"font-weight:400;\">" + step + "</span></li>\n")
+        f.write("\t\t\t\t\t\t\t<li><span style=\"font-weight:400;\">" + step + "</span></li>\n")
     
-    f.write("\t\t\t</ol>\n")
-    f.write("\t\t</div><!-- end container -->\n")
-    f.write("\t</div><!-- end section -->\n")
+    f.write("\t\t\t\t\t\t</ol>\n")
+    f.write("\t\t\t\t\t</div><!-- end container -->\n")
+    f.write("\t\t\t\t</div><!-- end section -->\n")
+    f.write("\t\t\t</div>\n")
+    f.write("\t\t</div>\n")
+    f.write("\t</div>\n")
 
 def end_html(f, source):
     # if source != "":
