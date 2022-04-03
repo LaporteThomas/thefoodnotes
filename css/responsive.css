@@ -4,12 +4,17 @@
 @media only screen and (min-width: 1920px){}
 
 @media (max-width: 1919px)  and (orientation: landscape){
+	.header{
+		border-bottom: 4px solid #151f26;
+	}
+	
 	.inner-box-title{
 		font-size: 30px;
+		border-bottom: 4px solid #151f26;
+		border-right: 4px solid #151f26;
 	}
 
 	.recipe-inner-box{
-		list-style: none;
 		margin: 62px;
 		padding-bottom: 124px;
 	}
@@ -22,8 +27,14 @@
 }
 
 @media (max-width:1199px) and (orientation: landscape){
+	.header{
+		border-bottom: 3px solid #151f26;
+	}
+	
 	.inner-box-title{
 		font-size: 24px;
+		border-bottom: 3px solid #151f26;
+		border-right: 3px solid #151f26;
 	}
 
 	.recipe-inner-box{
@@ -46,6 +57,8 @@
 
 	.inner-box-title{
 		font-size: 14px;
+		border-bottom: 2px solid #151f26;
+		border-right: 2px solid #151f26;
 	}
 
 	.recipe-inner-box{
