@@ -75,21 +75,48 @@ ul{
 }
 
 /* Header */
+.box-header{
+    width: 100vw;
+    height: 15vh;
+    max-height: 15vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
 
-.header {
+.section-header {
+    background-color: #151f26;
     display: block;
     position: static;
-    height: 20vh;
-    border-bottom: 5px solid #151f26;
+    width: 25vw;
+    height: 15vh;
+    border-bottom: 4px solid #151f26;
 }
 
 .container-header {
     display: flex;
     height:100%;
     width: 100%;
+    align-items:center;
+    justify-content:center;
 }
 
-.container-header h3{
+.section-title {
+    /* background-color: #151f26; */
+    display: block;
+    position: static;
+    width: 75vw;
+    height: 15vh;
+    border-bottom: 4px solid #151f26;
+}
+
+.container-title {
+    display: flex;
+    height:100%;
+    width: 100%;
+}
+
+.container-title h3{
     font-size: 60px;
     font-weight: 700;
     padding-left: 50px;
@@ -129,10 +156,10 @@ ul{
     display: flex;
     height: 100%;
     width:100%;
-    border-bottom: 5px solid #151f26;
+    border-bottom: 4px solid #151f26;
     border-top: 0px solid #151f26;
     border-left: 0px solid #151f26;
-    border-right: 5px solid #151f26;
+    border-right: 4px solid #151f26;
     text-align: center;
     margin:0;
 }
@@ -173,7 +200,7 @@ ul{
 .container-ingredient{
     display: grid;
     grid-template-rows: 10vh 70vh;
-    border-right:5px solid #151f26;
+    border-right:4px solid #151f26;
     width: 30vw;
     height: 80vh;
     max-width: 30vw;
@@ -182,7 +209,7 @@ ul{
 
 .ingredient-title-inner-box{
     display: flex;
-    border-bottom:5px solid #151f26;
+    border-bottom:4px solid #151f26;
     vertical-align: middle;
     width: 30vw;
     height: 10vh;
@@ -246,7 +273,7 @@ ul{
 
 .recipe-title-inner-box{
     display: flex;
-    border-bottom:5px solid #151f26;
+    border-bottom:4px solid #151f26;
     vertical-align: middle;
     width: 50vw;
     height: 10vh;
