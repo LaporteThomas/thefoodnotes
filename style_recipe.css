@@ -72,42 +72,43 @@ ul{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-}
+    border: 4px solid #151f26;
+  }
 
 /* Header */
 .box-header{
-    width: 100vw;
     height: 15vh;
     max-height: 15vh;
+    width: 100vw;
     max-width: 100vw;
     display: flex;
+    border-bottom: 4px solid #151f26;
     flex-direction: row;
 }
 
-.section-header {
+.header {
     background-color: #151f26;
     display: block;
     position: static;
-    width: 25vw;
     height: 15vh;
-    border-bottom: 4px solid #151f26;
+    max-height: 15vh;
+    width: 17.5vw;
+    max-width: 17.5vw;
+    border-right: 4px solid #151f26;
 }
 
 .container-header {
     display: flex;
     height:100%;
     width: 100%;
-    align-items:center;
-    justify-content:center;
 }
 
 .section-title {
     /* background-color: #151f26; */
     display: block;
     position: static;
-    width: 75vw;
+    width: 82.5vw;
     height: 15vh;
-    border-bottom: 4px solid #151f26;
 }
 
 .container-title {
@@ -125,29 +126,32 @@ ul{
 }
 
 
-/* Title Section */
+/* Recipe Section */
 .box-recipe{
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 80vh;
-    max-height:80vh;
     max-width: 100vw;
+    height: 85vh;
+    max-height:85vh;
 }
 
 /* Info part */
 .section-info{
     display: block;
     position: static;
-    width: 20vw;
-    height: 80vh;
-    max-width: 20vw;
-    max-height: 80vh;
+    width: 17.5vw;
+    max-width: 17.5vw;
+    height: 85vh;
+    max-height: 85vh;
 }
 
 .container-info{
-    height: 100%;
-    width:100%;
+    width: 17.5vw;
+    max-width: 17.5vw;
+    height: 85vh;
+    max-height: 85vh;
+    border-right: 4px solid #151f26;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
@@ -156,16 +160,17 @@ ul{
     display: flex;
     height: 100%;
     width:100%;
-    border-bottom: 4px solid #151f26;
+    border-bottom: 0px solid #151f26;
     border-top: 0px solid #151f26;
     border-left: 0px solid #151f26;
     border-right: 4px solid #151f26;
-    text-align: center;
+    text-align: left;
     margin:0;
 }
 
 .container-inner-box{
-    margin: auto;
+    margin-top :auto;
+    margin-bottom :auto;
     /* height: 100%;
     width:100%; */
 }
@@ -174,47 +179,47 @@ ul{
 	font-size: 36px;
 	font-weight: 400;
     padding: 0px;
-    margin:auto;
     line-height: 48px;
+    padding-left: 72px;
+    padding-right: 72px;
 }
 
 /* Ingredient part */
 .section-ingredient-recipe{
     display: flex;
     flex-direction: row;
-    width: 80vw;
-    height: 80vh;
-    max-width: 80vw;
-    max-height: 80vh;
+    width: 82.5vw;
+    max-width: 82.5vw;
+    height: 85vh;
+    max-height: 85vh;
 }
 
 .section-ingredient{
     display: block;
     position: static;
-    width: 30vw;
-    height: 80vh;
-    max-width: 30vw;
-    max-height: 80vh;
+    width: 32.5vw;
+    max-width: 32.5vw;
+    height: 85vh;
+    max-height: 85vh;
 }
 
 .container-ingredient{
+    margin: 5vh 2.5vw 5vh 5vw;
     display: grid;
-    grid-template-rows: 10vh 70vh;
-    border-right:4px solid #151f26;
-    width: 30vw;
-    height: 80vh;
-    max-width: 30vw;
-    max-height: 80vh;
+    grid-template-rows: 7.5vh 67.5vh;
+    width: 25vw;
+    height: 75vh;
+    max-width: 25vw;
+    max-height: 75vh;
 }
 
 .ingredient-title-inner-box{
     display: flex;
-    border-bottom:4px solid #151f26;
     vertical-align: middle;
-    width: 30vw;
-    height: 10vh;
-    max-width: 30vw;
-    max-height: 10vh;
+    width: 25vw;
+    max-width: 25vw;
+    height: 7.5vh;
+    max-height: 7.5vh;
 }
 
 .ingredient-title-inner-box h2{
@@ -222,17 +227,17 @@ ul{
 	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 62px;
+    /* padding-left: 50px; */
 }
 
 .ingredient-list-inner-box{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    width: 30vw;
-    height: 70vh;
-    max-width: 30vw;
-    max-height: 70vh;
+    width: 25vw;
+    height: 67.5vh;
+    max-width: 25vw;
+    max-height: 67.5vh;
 }
 
 .ingredient-list-inner-box::-webkit-scrollbar {
@@ -241,15 +246,15 @@ ul{
 
 .ingredient-list-inner-box ul{
     list-style-type: none;
-    margin: 62px;
-    padding-bottom: 124px;
+    /* margin: 50px; */
+    padding-bottom: 100px;
 }
 
 .ingredient-list-inner-box li{ 
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 32px;
-    padding-bottom: 31px;
+    line-height: 30px;
+    padding-bottom: 25px;
 }
 
 /* recipe part */
@@ -257,28 +262,28 @@ ul{
     display: block;
     position: static;
     width: 50vw;
-    height: 80vh;
+    height: 85vh;
     max-width: 50vw;
-    max-height: 80vh;
+    max-height: 85vh;
 }
 
 .container-recipe{
+    margin : 5vh 5vw 5vh 2.5vw;
     display: grid;
-    grid-template-rows: 10vh 70vh;
-    width: 50vw;
-    height: 80vh;
-    max-width: 50vw;
-    max-height: 80vh;
+    grid-template-rows: 7.5vh 67.5vh;
+    width: 42.5vw;
+    height: 75vh;
+    max-width: 42.5vw;
+    max-height: 75vh;
 }
 
 .recipe-title-inner-box{
     display: flex;
-    border-bottom:4px solid #151f26;
     vertical-align: middle;
-    width: 50vw;
-    height: 10vh;
-    max-width: 50vw;
-    max-height: 10vh;
+    width: 42.5vw;
+    height: 7.5vh;
+    max-width: 42.5vw;
+    max-height: 7.5vh;
 }
 
 .recipe-title-inner-box h2{
@@ -286,17 +291,17 @@ ul{
 	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 62px;
+    /* padding-left: 50px; */
 }
 
 .recipe-list-inner-box{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    width: 50vw;
-    height: 70vh;
-    max-width: 50vw;
-    max-height: 70vh;
+    width: 42.5vw;
+    height: 67.5vh;
+    max-width: 42.5vw;
+    max-height: 67.5vh;
 }
 
 .recipe-list-inner-box::-webkit-scrollbar {
@@ -304,14 +309,14 @@ ul{
 }
 
 .recipe-list-inner-box ol{
-    margin: 62px 62px 62px 62px;
-    padding-bottom: 124px;
-    padding-left: 36px;
+    margin: 0px 0px 0px 0px;
+    padding-bottom: 100px;
+    padding-left: 30px;
 }
 
 .recipe-list-inner-box li{ 
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 32px;
-    padding-bottom: 31px;
+    line-height: 30px;
+    padding-bottom: 25px; 
 }

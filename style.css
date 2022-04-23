@@ -77,10 +77,10 @@ ul{
 
 /* Header */
 .box-header{
-    width: 25vw;
+    width: 17.5vw;
     height: 100vh;
     max-height: 100vh;
-    max-width: 25vw;
+    max-width: 17.5vw;
 }
 
 
@@ -103,9 +103,9 @@ ul{
 .section-title {
     display: block;
     position: static;
-    width: 25vw;
+    width: 17.5vw;
     height: 85vh;
-    max-width: 25vw;
+    max-width: 17.5vw;
     max-height: 85vh;
 }
 
@@ -147,8 +147,8 @@ ul{
 /* Recipe part */
 .box-list{
     display: flex;
-    width: 75vw;
-    max-width: 75vw;
+    width: 82.5vw;
+    max-width: 82.5vw;
     height: 100vh;
     max-height: 100vh;
     overflow: auto;
@@ -174,7 +174,7 @@ ul{
 }
 
 .recipe-inner-box li{ 
-    padding: 36px 54px 36px 54px;
+    padding: 36px 144px 36px 144px;
     font-size: 36px;
     font-weight: 600;
     line-height: 48px;
