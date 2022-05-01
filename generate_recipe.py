@@ -1,13 +1,14 @@
 
 from os import path
 
-def create_html_recipe(recipe, sectionId, color):
+def create_html_recipe(recipe, sectionId, color, recipePrevious, recipeNext):
     if path.isfile("./recette/" + sectionId + "/" + recipe.namefile + ".html") == False:
         f = write_head("./recette/" + sectionId + "/" + recipe.namefile, color)
         write_title(f, recipe.name, color)
         write_info(f, recipe.infos, color)
         write_ingredient_info(f, recipe.ingredient, color)
         write_recipe_step(f, recipe.step, color)
+        write_following_recipe(f, sectionId, recipePrevious, recipeNext, color)
         end_html(f, recipe.source)
         f.close()
 
@@ -46,10 +47,17 @@ def write_title(f, name, color):
     f.write("<body>\n\n")
 
     f.write("\t<div class=\"box\">\n")
-    f.write("\t\t<div id=\"header\" class=\"header\">\n")
-    f.write("\t\t\t<div class=\"container-header\">\n")
-    f.write("\t\t\t\t<h3> <a href=\"../../index.html\">" + name + "<span style=\"color:#" + color + ";\">.</span></a></h3>\n")
+    f.write("\t\t<div class=\"box-header\">\n")
+    f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
+    f.write("\t\t\t\t<a href=\"../../index.html\" class=\"container-header\">\n")
+    f.write("\t\t\t\t\t<img src=\"../../images/Fichier 2.png\" style =\"height:40%;margin:auto\">\n")
+    f.write("\t\t\t\t</a>\n")
     f.write("\t\t\t</div>\n")
+    f.write("\t\t\t<div id=\"title\" class=\"section-title\">\n")
+    f.write("\t\t\t\t<div class=\"container-title\">\n")
+    f.write("\t\t\t\t\t<h3>" + name + "<span style=\"color:#" + color + ";\">.</span></h3>\n")
+    f.write("\t\t\t\t</div>\n")
+    f.write("\t\t\t</div>\n\n")
     f.write("\t\t</div>\n\n")
 
 def write_info(f, infos, color):
@@ -70,8 +78,7 @@ def write_info(f, infos, color):
 def write_block_info(f, info_type, info_quantity):
     f.write("\t\t\t\t\t<div class=\"infos-inner-box\">\n")
     f.write("\t\t\t\t\t\t<div class=\"container-inner-box\">\n")
-    f.write("\t\t\t\t\t\t\t<h2>" + info_type + "</h2>\n")
-    f.write("\t\t\t\t\t\t\t<p>" + info_quantity + "</p>\n")
+    f.write("\t\t\t\t\t\t\t<p><span style=\"font-weight: 700;\">" + info_type + "</span><br>" + info_quantity + "</p>\n")
     f.write("\t\t\t\t\t\t</div>\n")
     f.write("\t\t\t\t\t</div>\n")
 
@@ -120,6 +127,18 @@ def write_recipe_step(f, recipe_step, color):
     f.write("\t\t\t\t\t</div><!-- end container -->\n")
     f.write("\t\t\t\t</div><!-- end section -->\n")
     f.write("\t\t\t</div>\n")
+    f.write("\t\t</div>\n")
+
+def write_following_recipe(f, sectionId, recipePrevious, recipeNext, color):
+    f.write("\t\t<div class=\"section-list-recipe\">\n")
+    f.write("\t\t\t<div class=\"container-list-recipe\">\n")
+    f.write("\t\t\t\t<a class=\"recipe-previous recipe-" + sectionId + "\" href=\"./" + recipePrevious.namefile + ".html\">\n")
+    f.write("\t\t\t\t\t<h2>🞀 "+ recipePrevious.name + "<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t</a>\n")
+    f.write("\t\t\t\t<a class=\"recipe-next recipe-" + sectionId + "\" href=\"./" + recipeNext.namefile + ".html\">\n")
+    f.write("\t\t\t\t\t<h2>"+ recipeNext.name + "<span style=\"color:#" + color + ";\">.</span> 🞂</h2>\n")
+    f.write("\t\t\t\t</a>\n")
+    f.write("\t\t\t</div><!-- end section -->\n")
     f.write("\t\t</div>\n")
     f.write("\t</div>\n")
 

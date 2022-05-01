@@ -36,14 +36,14 @@ def write_header(f):
     f.write("<body>\n\n")
 
     f.write("\t<div class=\"box\">\n")
-    f.write("\t\t<div id=\"header\" class=\"header\">\n")
-    f.write("\t\t\t<div class=\"container-header\">\n")
-    f.write("\t\t\t\t<img src=\"./images/lesrecettesdetooba.svg\" style =\"height:50%;margin:auto\">\n")
-    f.write("\t\t\t</div>\n")
-    f.write("\t\t</div>\n\n")
+    f.write("\t\t<div class=\"box-header\">\n")
+    f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
+    f.write("\t\t\t\t<div class=\"container-header\">\n")
+    f.write("\t\t\t\t\t<img src=\"./images/Fichier 2.png\" style =\"height:40%;margin:auto\">\n")
+    f.write("\t\t\t\t</div>\n")
+    f.write("\t\t\t</div>\n\n")
 
 def write_section_title(f):
-    f.write("\t\t<div class=\"box-recipe\">\n")
     f.write("\t\t\t<div class=\"section-title\">\n")
     f.write("\t\t\t\t<div class=\"container-title\">\n")
     f.write("\t\t\t\t\t<button id=\"ptitdej\" class=\"inner-box-title\">le petit-déjeuner.</button>\n")
@@ -53,25 +53,27 @@ def write_section_title(f):
     f.write("\t\t\t\t\t<button id=\"dessert\" class=\"inner-box-title\">les desserts.</button>\n")
     f.write("\t\t\t\t\t<button id=\"sauce\" class=\"inner-box-title\">les sauces.</button>\n")
     f.write("\t\t\t\t</div>\n")
-    f.write("\t\t\t</div>\n\n")
-    f.write("\t\t\t<div class=\"box-list\">\n")
+    f.write("\t\t\t</div>\n")
+    f.write("\t\t</div>\n\n")
+    f.write("\t\t<div class=\"box-list\">\n")
 
 def write_recipe_section(f, sectionId, recipes, color):
 
-    f.write("\t\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: none;\">\n")
-    f.write("\t\t\t\t\t<div class=\"container-list-recipe\">\n")
-    f.write("\t\t\t\t\t\t<ul class=\"recipe-inner-box\">\n")
+    f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: none;\">\n")
+    f.write("\t\t\t\t<div class=\"container-list-recipe\">\n")
+    f.write("\t\t\t\t\t<ul class=\"recipe-inner-box\">\n")
 
+    index = 0
     for r in recipes:
-        generate_recipe.create_html_recipe(r, sectionId, color)
-        f.write("\t\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\">"+ r.name + "<span style=\"color:#" + color + ";\">.</span></a></li>\n")
+        generate_recipe.create_html_recipe(r, sectionId, color, recipes[index - 1], recipes[(index + 1)%len(recipes)])
+        index += 1
+        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\">"+ r.name + "<span style=\"color:#" + color + ";\">.</span></a></li>\n")
 
-    f.write("\t\t\t\t\t\t</ul>\n")
-    f.write("\t\t\t\t\t</div><!-- end container -->\n")
-    f.write("\t\t\t\t</div><!-- end section -->\n\n")
+    f.write("\t\t\t\t\t</ul>\n")
+    f.write("\t\t\t\t</div><!-- end container -->\n")
+    f.write("\t\t\t</div><!-- end section -->\n\n")
 
 def end_html(f):
-    f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n")
     f.write("\t</div>\n\n")
 
