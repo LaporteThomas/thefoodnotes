@@ -1,259 +1,103 @@
 /******************************************
     Version: 1.0
 /****************************************** */
-@media only screen and (min-width: 1920px){}
+@media only screen and (min-width: 2560px){}
+
+@media (max-width: 2559px)  and (orientation: landscape){
+	.inner-box-title{
+		font-size: 30px;
+		/* padding-left: 45px;
+		padding-right: 45px; */
+	}
+	
+	.recipe-inner-box li{ 
+		padding: 18px 5vw 18px 5vw;
+		font-size: 30px;
+		line-height: 42px;
+	}
+}
 
 @media (max-width: 1919px)  and (orientation: landscape){
-	.header{
-		border-bottom: 4px solid #151f26;
+	.box{
+		border: 3px solid #151f26;
+	}
+
+	.inner-box-title{
+		font-size: 24px;
+		border-right: 3px solid #151f26;
+		/* padding-left: 36px;
+		padding-right: 36px; */
+	}
+	
+	.recipe-inner-box li{ 
+		padding: 12px 5vw 12px 5vw;
+		font-size: 24px;
+		line-height: 36px;
+		border-top: 3px solid #EAEAE7;
+    	border-bottom: 3px solid #EAEAE7;
+	}
+}
+
+@media (max-width: 1279px)  and (orientation: landscape){
+	.box{
+		border: 2px solid #151f26;
 	}
 	
 	.inner-box-title{
-		font-size: 30px;
-		border-bottom: 4px solid #151f26;
-		border-right: 4px solid #151f26;
+		font-size: 18px;
+		border-right: 2px solid #151f26;
+		/* padding-left: 36px;
+		padding-right: 36px; */
 	}
-
-	.recipe-inner-box{
-		margin: 62px;
-		padding-bottom: 124px;
-	}
-
-	.recipe-inner-box li{
-		font-size: 30px;
-		line-height: 32px;
-		padding-bottom: 31px;
+	
+	.recipe-inner-box li{ 
+		padding: 6px 5vw 6px 5vw;
+		font-size: 18px;
+		line-height: 27px;
+		border-top: 2px solid #EAEAE7;
+    	border-bottom: 2px solid #EAEAE7;
 	}
 }
 
-@media (max-width:1199px) and (orientation: landscape){
-	.header{
-		border-bottom: 3px solid #151f26;
+@media (max-width: 768px)  and (orientation: landscape){
+	.box{
+		border: 1px solid #151f26;
 	}
 	
 	.inner-box-title{
-		font-size: 24px;
-		border-bottom: 3px solid #151f26;
-		border-right: 3px solid #151f26;
+		font-size: 12px;
+		border-right: 1px solid #151f26;
+		/* padding-left: 36px;
+		padding-right: 36px; */
 	}
-
-	.recipe-inner-box{
-		list-style: none;
-		margin: 50px;
-		padding-bottom: 100px;
-	}	
-
-	.recipe-inner-box li{
-		font-size: 24px;
-		line-height: 26px;
-		padding-bottom: 25px;
+	
+	.recipe-inner-box li{ 
+		padding: 4px 5vw 4px 5vw;
+		font-size: 12px;
+		line-height: 18px;
+		border-top: 1px solid #EAEAE7;
+    	border-bottom: 1px solid #EAEAE7;
 	}
 }
 
-@media (max-width:799px) and (orientation: landscape){
-	.header{
-		border-bottom: 2px solid #151f26;
+@media (max-width: 480px)  and (orientation: landscape){
+	.box{
+		border: 0.5px solid #151f26;
 	}
-
+	
 	.inner-box-title{
-		font-size: 14px;
-		border-bottom: 2px solid #151f26;
-		border-right: 2px solid #151f26;
+		font-size: 6px;
+		border-right: 0.5px solid #151f26;
+		/* padding-left: 36px;
+		padding-right: 36px; */
 	}
-
-	.recipe-inner-box{
-		list-style: none;
-		margin: 30px;
-		padding-bottom: 60px;
-	}	
-
-	.recipe-inner-box li{
-		font-size: 14px;
-		line-height: 16px;
-		padding-bottom: 15px;
-	}
-}
-
-@media (max-width:1919px) and (orientation: portrait){
-	.header{
-		border-bottom: 4px solid #151f26;
-	}
-
-	.section-title {
-		width: 100vw;
-		height: 5vh;
-		max-width: 100vw;
-		max-height: 5vh;
-		overflow: auto;
-		-ms-overflow-style: none;  /* IE and Edge */
-    	scrollbar-width: none;  /* Firefox */
-  		white-space: nowrap;
-	}
-
-	.section-title::-webkit-scrollbar {
-		display: none;
-	}
-
-	.container-title{
-		height: 100%;
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: auto;
-		background-color: #eaeae7;
-	}
-
-	.inner-box-title{
-		font-size: 30px;
-		padding-right: 31px;
-		padding-left: 31px;
-		border-bottom: 4px solid #151f26;
-		border-right: 4px solid #151f26;
-	}
-
-	.box-list{
-		width: 100vw;
-		max-width: 100vw;
-		height: 95vh;
-		max-height: 95vh;
-	}
-
-	.recipe-inner-box{
-		list-style: none;
-		margin: 62px;
-		padding-bottom: 124px;
-	}
-
-	.recipe-inner-box li{
-		font-size: 30px;
-		line-height: 32px;
-		padding-bottom: 31px;
-	}
-
-	.box-recipe{
-		flex-direction: column;
-	}
-}
-
-@media (max-width:1199px) and (orientation: portrait){
-	.header{
-		border-bottom: 3px solid #151f26;
-	}
-
-	.section-title {
-		width: 100vw;
-		height: 5vh;
-		max-width: 100vw;
-		max-height: 5vh;
-		overflow: auto;
-		-ms-overflow-style: none;  /* IE and Edge */
-    	scrollbar-width: none;  /* Firefox */
-  		white-space: nowrap;
-	}
-
-	.section-title::-webkit-scrollbar {
-		display: none;
-	}
-
-	.container-title{
-		height: 100%;
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: auto;
-		background-color: #eaeae7;
-	}
-
-	.inner-box-title{
-		font-size: 24px;
-		padding-right: 25px;
-		padding-left: 25px;
-		border-bottom: 3px solid #151f26;
-		border-right: 3px solid #151f26;
-	}
-
-	.box-list{
-		width: 100vw;
-		max-width: 100vw;
-		height: 95vh;
-		max-height: 95vh;
-	}
-
-	.recipe-inner-box{
-		list-style: none;
-		margin: 50px;
-		padding-bottom: 100px;
-	}
-
-	.recipe-inner-box li{
-		font-size: 24px;
-		line-height: 26px;
-		padding-bottom: 25px;
-	}
-
-	.box-recipe{
-		flex-direction: column;
-	}
-}
-
-@media (max-width:799px) and (orientation: portrait){
-	.header{
-		border-bottom: 2px solid #151f26;
-	}
-
-	.section-title {
-		width: 100vw;
-		height: 5vh;
-		max-width: 100vw;
-		max-height: 5vh;
-		overflow: auto;
-		-ms-overflow-style: none;  /* IE and Edge */
-    	scrollbar-width: none;  /* Firefox */
-  		white-space: nowrap;
-	}
-
-	.section-title::-webkit-scrollbar {
-		display: none;
-	}
-
-	.container-title{
-		height: 100%;
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: auto;
-		background-color: #eaeae7;
-	}
-
-	.inner-box-title{
-		font-size: 18px;
-		padding-right: 19px;
-		padding-left: 19px;
-		border-bottom: 2px solid #151f26;
-		border-right: 2px solid #151f26;
-	}
-
-	.box-list{
-		width: 100vw;
-		max-width: 100vw;
-		height: 95vh;
-		max-height: 95vh;
-	}
-
-	.recipe-inner-box{
-		list-style: none;
-		margin: 38px;
-		padding-bottom: 76px;
-	}
-
-	.recipe-inner-box li{
-		font-size: 18px;
-		line-height: 20px;
-		padding-bottom: 19px;
-	}
-
-	.box-recipe{
-		flex-direction: column;
+	
+	.recipe-inner-box li{ 
+		padding: 2px 5vw 2px 5vw;
+		font-size: 6px;
+		line-height: 9px;
+		border-top: 0.5px solid #EAEAE7;
+    	border-bottom: 0.5px solid #EAEAE7;
 	}
 }
 

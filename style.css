@@ -117,8 +117,13 @@ ul{
 }
 
 .button {
-    outline: none;
-    border: none;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
     display: block;
 }
 
@@ -134,14 +139,14 @@ ul{
     font-size: 36px;
     font-weight: 700;
     font-family: 'Outfit';
-    border-bottom: 0px solid #151f26;
-    border-top: 0px solid #151f26;
     border-left: 0px solid #151f26;
     border-right: 4px solid #151f26;
+    border-bottom: 4px solid #EAEAE7;
+    border-top: 4px solid #EAEAE7;
     cursor:pointer;
     text-align: left;
-    padding-left: 54px;
-    padding-right: 54px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 /* Recipe part */
@@ -174,7 +179,7 @@ ul{
 }
 
 .recipe-inner-box li{ 
-    padding: 36px 144px 36px 144px;
+    padding: 24px 5vw 24px 5vw;
     font-size: 36px;
     font-weight: 600;
     line-height: 48px;
@@ -195,24 +200,20 @@ ul{
 
 .recipe-gouter li:hover{
     background-color: #ddb792;
-    border-top: 4px solid #151f26;
-    border-bottom: 4px solid #151f26;
+    border-color: #151f26;
 }
 
 .recipe-apero li:hover{
     background-color: #d5dd9d;
-    border-top: 4px solid #151f26;
-    border-bottom: 4px solid #151f26;
+    border-color: #151f26;
 }
 
 .recipe-plat li:hover{
     background-color: #f58c74;
-    border-top: 4px solid #151f26;
-    border-bottom: 4px solid #151f26;
+    border-color: #151f26;
 }
 
 .recipe-dessert li:hover{
     background-color: #8ac5ce;
-    border-top: 4px solid #151f26;
-    border-bottom: 4px solid #151f26;
+    border-color: #151f26;
 }

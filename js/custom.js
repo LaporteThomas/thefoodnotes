@@ -17,8 +17,8 @@ $( document ).ready(function() {
             $("#recipe-gouter-container").toggle();
             countButtonGouter = false;
             document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-            document.getElementById("gouter").style.borderTop = "0px solid #151f26";
-            document.getElementById("gouter").style.borderBottom = "0px solid #151f26";
+            document.getElementById("gouter").style.borderTop = "4px solid #EAEAE7";
+            document.getElementById("gouter").style.borderBottom = "4px solid #EAEAE7";
         }
         if (countButtonApero){
             $("#recipe-apero-container").toggle();
