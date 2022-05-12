@@ -11,9 +11,22 @@
 	}
 	
 	.recipe-inner-box li{ 
-		padding: 18px 5vw 18px 5vw;
+		padding: 22px 5vw 18px 5vw;
 		font-size: 30px;
 		line-height: 42px;
+	}
+
+	.container-header p{
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	#tooba-title{
+		font-size: 60px;
+	}
+	
+	#dot-title{
+		font-size: 60px;
 	}
 }
 
@@ -23,18 +36,37 @@
 	}
 
 	.inner-box-title{
-		font-size: 24px;
+		font-size: 20px;
 		border-right: 3px solid #151f26;
 		/* padding-left: 36px;
 		padding-right: 36px; */
 	}
 	
 	.recipe-inner-box li{ 
-		padding: 12px 5vw 12px 5vw;
-		font-size: 24px;
-		line-height: 36px;
-		border-top: 3px solid #EAEAE7;
+		padding: 15px 5vw 12px 5vw;
+		font-size: 20px;
+		line-height: 32px;
+		border-top: 3px solid #D1D1CE;
     	border-bottom: 3px solid #EAEAE7;
+	}
+
+	.container-header p{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	#ptitdej{
+		background-color: #fec876;
+		border-top: 3px solid #151f26;
+		border-bottom: 3px solid #151f26;
+	}
+
+	#tooba-title{
+		font-size: 48px;
+	}
+	
+	#dot-title{
+		font-size: 48px;
 	}
 }
 
@@ -44,18 +76,37 @@
 	}
 	
 	.inner-box-title{
-		font-size: 18px;
+		font-size: 12px;
 		border-right: 2px solid #151f26;
 		/* padding-left: 36px;
 		padding-right: 36px; */
 	}
 	
 	.recipe-inner-box li{ 
-		padding: 6px 5vw 6px 5vw;
-		font-size: 18px;
-		line-height: 27px;
-		border-top: 2px solid #EAEAE7;
+		padding: 8px 5vw 6px 5vw;
+		font-size: 12px;
+		line-height: 24px;
+		border-top: 2px solid #D1D1CE;
     	border-bottom: 2px solid #EAEAE7;
+	}
+
+	.container-header p{
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	#ptitdej{
+		background-color: #fec876;
+		border-top: 2px solid #151f26;
+		border-bottom: 2px solid #151f26;
+	}
+
+	#tooba-title{
+		font-size: 28px;
+	}
+	
+	#dot-title{
+		font-size: 28px;
 	}
 }
 
@@ -65,19 +116,39 @@
 	}
 	
 	.inner-box-title{
-		font-size: 12px;
+		font-size: 8px;
 		border-right: 1px solid #151f26;
 		/* padding-left: 36px;
 		padding-right: 36px; */
 	}
 	
 	.recipe-inner-box li{ 
-		padding: 4px 5vw 4px 5vw;
-		font-size: 12px;
+		padding: 5px 5vw 4px 5vw;
+		font-size: 8px;
 		line-height: 18px;
-		border-top: 1px solid #EAEAE7;
+		border-top: 1px solid #D1D1CE;
     	border-bottom: 1px solid #EAEAE7;
 	}
+
+	.container-header p{
+		font-size: 8px;
+		line-height: 14px;
+	}
+
+	#ptitdej{
+		background-color: #fec876;
+		border-top: 1px solid #151f26;
+		border-bottom: 1px solid #151f26;
+	}
+
+	#tooba-title{
+		font-size: 16px;
+	}
+	
+	#dot-title{
+		font-size: 16px;
+	}
+
 }
 
 @media (max-width: 480px)  and (orientation: landscape){
@@ -86,18 +157,38 @@
 	}
 	
 	.inner-box-title{
-		font-size: 6px;
+		font-size: 4px;
 		border-right: 0.5px solid #151f26;
 		/* padding-left: 36px;
 		padding-right: 36px; */
 	}
 	
 	.recipe-inner-box li{ 
-		padding: 2px 5vw 2px 5vw;
+		padding: 4.5px 5vw 2px 5vw;
 		font-size: 6px;
 		line-height: 9px;
-		border-top: 0.5px solid #EAEAE7;
+		border-top: 0.5px solid #D1D1CE;
     	border-bottom: 0.5px solid #EAEAE7;
 	}
+
+	.container-header p{
+		font-size: 4px;
+		line-height: 10px;
+	}
+
+	#ptitdej{
+		background-color: #fec876;
+		border-top: 0.5px solid #151f26;
+		border-bottom: 0.5px solid #151f26;
+	}
+
+	#tooba-title{
+		font-size: 8px;
+	}
+	
+	#dot-title{
+		font-size: 8px;
+	}
 }
+
 

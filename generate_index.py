@@ -39,7 +39,7 @@ def write_header(f):
     f.write("\t\t<div class=\"box-header\">\n")
     f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
     f.write("\t\t\t\t<div class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<img src=\"./images/Fichier 2.png\" style =\"height:40%;margin:auto\">\n")
+    f.write("\t\t\t\t\t<p>les recettes de<br><span id=\"tooba-title\">tooba</span><span id=\"dot-title\">.</span></p>\n")
     f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n\n")
 
@@ -59,7 +59,10 @@ def write_section_title(f):
 
 def write_recipe_section(f, sectionId, recipes, color):
 
-    f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: none;\">\n")
+    if sectionId == "ptitdej":
+        f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: block;\">\n")
+    else:
+        f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: none;\">\n")
     f.write("\t\t\t\t<div class=\"container-list-recipe\">\n")
     f.write("\t\t\t\t\t<ul class=\"recipe-inner-box\">\n")
 
@@ -69,6 +72,7 @@ def write_recipe_section(f, sectionId, recipes, color):
         index += 1
         f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\">"+ r.name + "<span style=\"color:#" + color + ";\">.</span></a></li>\n")
 
+    f.write("\t\t\t\t\t\t<li class=\"last-element\"></li>\n")
     f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div><!-- end container -->\n")
     f.write("\t\t\t</div><!-- end section -->\n\n")

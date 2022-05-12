@@ -1,193 +1,110 @@
-let countButtonPtitDej = false;
+let countButtonPtitDej = true;
 let countButtonGouter = false;
 let countButtonApero = false;
 let countButtonPlat = false;
 let countButtonDessert = false;
 let countButtonSauce = false;
 $( document ).ready(function() {
+
     $("#ptitdej").on("click",function(){
-        if (countButtonPtitDej == false){
-            $("#recipe-ptitdej-container").toggle();
-            document.getElementById("ptitdej").style.backgroundColor = "#fec876";
-            document.getElementById("ptitdej").style.borderTop = "4px solid #151f26";
-            document.getElementById("ptitdej").style.borderBottom = "4px solid #151f26";
-            countButtonPtitDej = true;
-        }
-        if (countButtonGouter){
-            $("#recipe-gouter-container").toggle();
-            countButtonGouter = false;
-            document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-            document.getElementById("gouter").style.borderTop = "4px solid #EAEAE7";
-            document.getElementById("gouter").style.borderBottom = "4px solid #EAEAE7";
-        }
-        if (countButtonApero){
-            $("#recipe-apero-container").toggle();
-            countButtonApero = false;
-            document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-            document.getElementById("apero").style.borderTop = "0px solid #151f26";
-            document.getElementById("apero").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonPlat){
-            $("#recipe-plat-container").toggle();
-            countButtonPlat = false;
-            document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-            document.getElementById("plat").style.borderTop = "0px solid #151f26";
-            document.getElementById("plat").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonDessert){
-            $("#recipe-dessert-container").toggle();
-            countButtonDessert = false;
-            document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-            document.getElementById("dessert").style.borderTop = "0px solid #151f26";
-            document.getElementById("dessert").style.borderBottom = "0px solid #151f26";
-        }
+        document.getElementById("dot-title").style.color = "#fec876";
+        if (countButtonPtitDej == false){countButtonPtitDej = toggle_element("ptitdej", "#fec876");}
+
+        if (countButtonGouter){countButtonGouter = untoggle_element("gouter");}
+
+        else if (countButtonApero){ countButtonApero = untoggle_element("apero");}
+
+        else if (countButtonPlat){countButtonPlat = untoggle_element("plat");}
+
+        else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
     });
+
     $("#gouter").on("click",function(){
-        if (countButtonGouter == false){
-            $("#recipe-gouter-container").toggle();
-            countButtonGouter = true;
-            document.getElementById("gouter").style.backgroundColor = "#ddb792";
-            document.getElementById("gouter").style.borderTop = "4px solid #151f26";
-            document.getElementById("gouter").style.borderBottom = "4px solid #151f26";
-        }
-        if (countButtonPtitDej){
-            $("#recipe-ptitdej-container").toggle();
-            countButtonPtitDej = false;
-            document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-            document.getElementById("ptitdej").style.borderTop = "0px solid #151f26";
-            document.getElementById("ptitdej").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonApero){
-            $("#recipe-apero-container").toggle();
-            countButtonApero = false;
-            document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-            document.getElementById("apero").style.borderTop = "0px solid #151f26";
-            document.getElementById("apero").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonPlat){
-            $("#recipe-plat-container").toggle();
-            countButtonPlat = false;
-            document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-            document.getElementById("plat").style.borderTop = "0px solid #151f26";
-            document.getElementById("plat").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonDessert){
-            $("#recipe-dessert-container").toggle();
-            countButtonDessert = false;
-            document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-            document.getElementById("dessert").style.borderTop = "0px solid #151f26";
-            document.getElementById("dessert").style.borderBottom = "0px solid #151f26";
-        }
+        document.getElementById("dot-title").style.color = "#ddb792";
+        if (countButtonGouter == false){countButtonGouter = toggle_element("gouter", "#ddb792");}
+
+        if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
+
+        else if (countButtonApero){ countButtonApero = untoggle_element("apero");}
+
+        else if (countButtonPlat){countButtonPlat = untoggle_element("plat");}
+
+        else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
     });
+
     $("#apero").on("click",function(){
-        if (countButtonApero == false){
-            $("#recipe-apero-container").toggle();
-            countButtonApero = true;
-            document.getElementById("apero").style.backgroundColor = "#d5dd9d";
-            document.getElementById("apero").style.borderTop = "4px solid #151f26";
-            document.getElementById("apero").style.borderBottom = "4px solid #151f26";
-        }
-        if (countButtonPtitDej){
-            $("#recipe-ptitdej-container").toggle();
-            countButtonPtitDej = false;
-            document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-            document.getElementById("ptitdej").style.borderTop = "0px solid #151f26";
-            document.getElementById("ptitdej").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonGouter){
-            $("#recipe-gouter-container").toggle();
-            countButtonGouter = false;
-            document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-            document.getElementById("gouter").style.borderTop = "0px solid #151f26";
-            document.getElementById("gouter").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonPlat){
-            $("#recipe-plat-container").toggle();
-            countButtonPlat = false;
-            document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-            document.getElementById("plat").style.borderTop = "0px solid #151f26";
-            document.getElementById("plat").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonDessert){
-            $("#recipe-dessert-container").toggle();
-            countButtonDessert = false;
-            document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-            document.getElementById("dessert").style.borderTop = "0px solid #151f26";
-            document.getElementById("dessert").style.borderBottom = "0px solid #151f26";
-        }
+        document.getElementById("dot-title").style.color = "#d5dd9d";
+        if (countButtonApero == false){countButtonApero = toggle_element("apero", "#d5dd9d");}
+
+        if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
+
+        else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
+
+        else if (countButtonPlat){countButtonPlat = untoggle_element("plat");}
+
+        else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
     });
+
     $("#plat").on("click",function(){
-        if (countButtonPlat == false){
-            $("#recipe-plat-container").toggle();
-            countButtonPlat = true;
-            document.getElementById("plat").style.backgroundColor = "#f58c74";
-            document.getElementById("plat").style.borderTop = "4px solid #151f26";
-            document.getElementById("plat").style.borderBottom = "4px solid #151f26";
-        }	
-        if (countButtonPtitDej){
-            $("#recipe-ptitdej-container").toggle();
-            countButtonPtitDej = false;
-            document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-            document.getElementById("ptitdej").style.borderTop = "0px solid #151f26";
-            document.getElementById("ptitdej").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonGouter){
-            $("#recipe-gouter-container").toggle();
-            countButtonGouter = false;
-            document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-            document.getElementById("gouter").style.borderTop = "0px solid #151f26";
-            document.getElementById("gouter").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonApero){
-            $("#recipe-apero-container").toggle();
-            countButtonApero = false;
-            document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-            document.getElementById("apero").style.borderTop = "0px solid #151f26";
-            document.getElementById("apero").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonDessert){
-            $("#recipe-dessert-container").toggle();
-            countButtonDessert = false;
-            document.getElementById("dessert").style.backgroundColor = "#EAEAE7";
-            document.getElementById("dessert").style.borderTop = "0px solid #151f26";
-            document.getElementById("dessert").style.borderBottom = "0px solid #151f26";
-        }
+        document.getElementById("dot-title").style.color = "#f58c74";
+        if (countButtonPlat == false){countButtonPlat = toggle_element("plat", "#f58c74");}
+
+        if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
+
+        else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
+
+        else if (countButtonApero){countButtonApero = untoggle_element("apero");}
+
+        else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}	
     });
     $("#dessert").on("click",function(){
-        if (countButtonDessert == false){
-            $("#recipe-dessert-container").toggle();
-            countButtonDessert = true;
-            document.getElementById("dessert").style.backgroundColor = "#8ac5ce";
-            document.getElementById("dessert").style.borderTop = "4px solid #151f26";
-            document.getElementById("dessert").style.borderBottom = "4px solid #151f26";
-        }
-        if (countButtonPtitDej){
-            $("#recipe-ptitdej-container").toggle();
-            countButtonPtitDej = false;
-            document.getElementById("ptitdej").style.backgroundColor = "#EAEAE7";
-            document.getElementById("ptitdej").style.borderTop = "0px solid #151f26";
-            document.getElementById("ptitdej").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonGouter){
-            $("#recipe-gouter-container").toggle();
-            countButtonGouter = false;
-            document.getElementById("gouter").style.backgroundColor = "#EAEAE7";
-            document.getElementById("gouter").style.borderTop = "0px solid #151f26";
-            document.getElementById("gouter").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonApero){
-            $("#recipe-apero-container").toggle();
-            countButtonApero = false;
-            document.getElementById("apero").style.backgroundColor = "#EAEAE7";
-            document.getElementById("apero").style.borderTop = "0px solid #151f26";
-            document.getElementById("apero").style.borderBottom = "0px solid #151f26";
-        }
-        if (countButtonPlat){
-            $("#recipe-plat-container").toggle();
-            countButtonPlat = false;
-            document.getElementById("plat").style.backgroundColor = "#EAEAE7";
-            document.getElementById("plat").style.borderTop = "0px solid #151f26";
-            document.getElementById("plat").style.borderBottom = "0px solid #151f26";
-        }
+        document.getElementById("dot-title").style.color = "#8ac5ce";
+        if (countButtonDessert == false){countButtonDessert = toggle_element("dessert", "#8ac5ce");}
+
+        if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
+
+        else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
+
+        else if (countButtonApero){countButtonApero = untoggle_element("apero");}
+
+        else if (countButtonPlat){countButtonPlat = untoggle_element("plat");}
     });
 });
+
+function untoggle_element(x){
+    $("".concat("#recipe-", x, "-container")).toggle();
+    document.getElementById(x).style.backgroundColor = "#EAEAE7";
+    document.getElementById(x).style.borderTop = "0px solid #151f26";
+    document.getElementById(x).style.borderBottom = "0px solid #151f26";
+    return false;
+}
+
+function toggle_element(x, color){
+    $("".concat("#recipe-", x, "-container")).toggle();
+    document.getElementById(x).style.backgroundColor = color;
+    if (window.matchMedia("(max-width: 480px)").matches){
+        document.getElementById(x).style.borderTop = "0.5px solid #151f26";
+        document.getElementById(x).style.borderBottom = "0.5px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 768px)").matches){
+        document.getElementById(x).style.borderTop = "1px solid #151f26";
+        document.getElementById(x).style.borderBottom = "1px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 1279px)").matches){
+        document.getElementById(x).style.borderTop = "2px solid #151f26";
+        document.getElementById(x).style.borderBottom = "2px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 1919px)").matches){
+        document.getElementById(x).style.borderTop = "3px solid #151f26";
+        document.getElementById(x).style.borderBottom = "3px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 2559px)").matches){
+        document.getElementById(x).style.borderTop = "4px solid #151f26";
+        document.getElementById(x).style.borderBottom = "4px solid #151f26";
+    }    
+    else{
+        document.getElementById(x).style.borderTop = "4px solid #151f26";
+        document.getElementById(x).style.borderBottom = "4px solid #151f26";
+    }
+    return true;
+}

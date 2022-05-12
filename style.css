@@ -88,14 +88,38 @@ ul{
     background-color: #151f26;
     display: block;
     position: static;
+    width: 17.5vw;
+    max-width: 17.5vw;
     height: 15vh;
-    border-bottom: 5px solid #151f26;
+    max-height: 15vh;
+    /* border-bottom: 5px solid #151f26; */
 }
 
 .container-header {
     display: flex;
-    height:100%;
-    width: 100%;
+    /* flex-direction: column; */
+    width: 17.5vw;
+    max-width: 17.5vw;
+    height: 15vh;
+    max-height: 15vh;
+    /* text-align: center; */
+}
+
+.container-header p{
+    font-size: 36px;
+    color:#EAEAE7;
+    font-weight: 700;
+    margin: auto;
+    line-height: 42px;
+}
+
+#tooba-title{
+    font-size: 72px;
+}
+
+#dot-title{
+    color:#fec876;
+    font-size: 72px;
 }
 
 /* Title Section */
@@ -141,13 +165,14 @@ ul{
     font-family: 'Outfit';
     border-left: 0px solid #151f26;
     border-right: 4px solid #151f26;
-    border-bottom: 4px solid #EAEAE7;
-    border-top: 4px solid #EAEAE7;
+    border-bottom: 0px solid #151f26;
+    border-top: 0px solid #151f26;
     cursor:pointer;
     text-align: left;
     padding-left: 2vw;
     padding-right: 2vw;
 }
+
 
 /* Recipe part */
 .box-list{
@@ -179,11 +204,11 @@ ul{
 }
 
 .recipe-inner-box li{ 
-    padding: 24px 5vw 24px 5vw;
+    padding: 28px 5vw 24px 5vw;
     font-size: 36px;
     font-weight: 600;
     line-height: 48px;
-    border-top: 4px solid #EAEAE7;
+    border-top: 4px solid #D1D1CE;
     border-bottom: 4px solid #EAEAE7;
 }
 
@@ -192,28 +217,72 @@ ul{
     height: 100%;
 }
 
-.recipe-ptitdej li:hover{
+#ptitdej{
     background-color: #fec876;
     border-top: 4px solid #151f26;
     border-bottom: 4px solid #151f26;
 }
 
+.section-recipe li:hover + li{
+    border-top-color: #151f26;
+}
+
+.recipe-ptitdej li:hover{
+    background-color: #fec876;
+    border-top-color: #151f26;
+    border-bottom-color: #fec876;
+}
+
+.recipe-ptitdej .last-element:hover{
+    background-color: #EAEAE7;
+    border-bottom-color: #EAEAE7;
+    border-top-color: #D1D1CE;
+}
+
 .recipe-gouter li:hover{
     background-color: #ddb792;
     border-color: #151f26;
+    border-bottom: 4px solid #ddb792;
+}
+
+.recipe-gouter .last-element:hover{
+    background-color: #EAEAE7;
+    border-bottom-color: #EAEAE7;
+    border-top-color: #D1D1CE;
 }
 
 .recipe-apero li:hover{
     background-color: #d5dd9d;
     border-color: #151f26;
+    border-bottom: 4px solid #d5dd9d;
+}
+
+.recipe-apero .last-element:hover{
+    background-color: #EAEAE7;
+    border-bottom-color: #EAEAE7;
+    border-top-color: #D1D1CE;
 }
 
 .recipe-plat li:hover{
     background-color: #f58c74;
     border-color: #151f26;
+    border-bottom: 4px solid #f58c74;
+}
+
+.recipe-plat .last-element:hover{
+    background-color: #EAEAE7;
+    border-bottom-color: #EAEAE7;
+    border-top-color: #D1D1CE;
 }
 
 .recipe-dessert li:hover{
     background-color: #8ac5ce;
     border-color: #151f26;
+    border-bottom: 4px solid #8ac5ce;
+}
+
+.recipe-dessert .last-element:hover{
+    background-color: #EAEAE7;
+    border-bottom-color: #EAEAE7;
+    border-top-color: #D1D1CE;
 }
