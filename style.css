@@ -28,7 +28,7 @@
 body {
     background-color: #EAEAE7;
     color: #151f26;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: 'Outfit';
     line-height: 1.80857;
     width:100vw;
@@ -106,20 +106,20 @@ ul{
 }
 
 .container-header p{
-    font-size: 36px;
+    font-size: 1.5vw;
     color:#EAEAE7;
     font-weight: 700;
     margin: auto;
-    line-height: 42px;
+    line-height: 1.8vw;
 }
 
 #tooba-title{
-    font-size: 72px;
+    font-size: 3vw;
 }
 
 #dot-title{
     color:#fec876;
-    font-size: 72px;
+    font-size: 3vw;
 }
 
 /* Title Section */
@@ -160,7 +160,7 @@ ul{
 .inner-box-title{
     background-color: #EAEAE7;
     color: #151f26;
-    font-size: 36px;
+    font-size: 1.5vw;
     font-weight: 700;
     font-family: 'Outfit';
     border-left: 0px solid #151f26;
@@ -173,6 +173,11 @@ ul{
     padding-right: 2vw;
 }
 
+#ptitdej{
+    background-color: #fec876;
+    border-top: 4px solid #151f26;
+    border-bottom: 4px solid #151f26;
+}
 
 /* Recipe part */
 .box-list{
@@ -204,10 +209,10 @@ ul{
 }
 
 .recipe-inner-box li{ 
-    padding: 28px 5vw 24px 5vw;
-    font-size: 36px;
+    padding: 1.6vw 5vw 1.5vw 5vw;
+    font-size: 1.5vw;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 1.5vw;
     border-top: 4px solid #D1D1CE;
     border-bottom: 4px solid #EAEAE7;
 }
@@ -215,12 +220,6 @@ ul{
 .section-recipe .recipe-plat{
     width: 100%;
     height: 100%;
-}
-
-#ptitdej{
-    background-color: #fec876;
-    border-top: 4px solid #151f26;
-    border-bottom: 4px solid #151f26;
 }
 
 .section-recipe li:hover + li{

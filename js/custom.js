@@ -73,35 +73,62 @@ $( document ).ready(function() {
 
 function untoggle_element(x){
     $("".concat("#recipe-", x, "-container")).toggle();
-    document.getElementById(x).style.backgroundColor = "#EAEAE7";
-    document.getElementById(x).style.borderTop = "0px solid #151f26";
-    document.getElementById(x).style.borderBottom = "0px solid #151f26";
+    if (window.matchMedia("(orientation: landscape)").matches){
+        document.getElementById(x).style.backgroundColor = "#EAEAE7";
+        document.getElementById(x).style.borderTop = "0px solid #151f26";
+        document.getElementById(x).style.borderBottom = "0px solid #151f26";
+    }
+    else if (window.matchMedia("(orientation: portrait)").matches){
+        document.getElementById(x).style.backgroundColor = "#EAEAE7";
+        document.getElementById(x).style.borderLeft = "0px solid #151f26";
+        document.getElementById(x).style.borderRight = "0px solid #151f26";
+    }
     return false;
 }
 
 function toggle_element(x, color){
     $("".concat("#recipe-", x, "-container")).toggle();
     document.getElementById(x).style.backgroundColor = color;
-    if (window.matchMedia("(max-width: 480px)").matches){
+    if (window.matchMedia("(max-width: 480px) and (orientation: landscape)").matches){
         document.getElementById(x).style.borderTop = "0.5px solid #151f26";
         document.getElementById(x).style.borderBottom = "0.5px solid #151f26";
     }
-    else if (window.matchMedia("(max-width: 768px)").matches){
+    else if (window.matchMedia("(max-width: 768px) and (orientation: landscape)").matches){
         document.getElementById(x).style.borderTop = "1px solid #151f26";
         document.getElementById(x).style.borderBottom = "1px solid #151f26";
     }
-    else if (window.matchMedia("(max-width: 1279px)").matches){
+    else if (window.matchMedia("(max-width: 1279px) and (orientation: landscape)").matches){
         document.getElementById(x).style.borderTop = "2px solid #151f26";
         document.getElementById(x).style.borderBottom = "2px solid #151f26";
     }
-    else if (window.matchMedia("(max-width: 1919px)").matches){
+    else if (window.matchMedia("(max-width: 1919px) and (orientation: landscape)").matches){
         document.getElementById(x).style.borderTop = "3px solid #151f26";
         document.getElementById(x).style.borderBottom = "3px solid #151f26";
     }
-    else if (window.matchMedia("(max-width: 2559px)").matches){
+    else if (window.matchMedia("(max-width: 2559px) and (orientation: landscape)").matches){
         document.getElementById(x).style.borderTop = "4px solid #151f26";
         document.getElementById(x).style.borderBottom = "4px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 480px) and (orientation: portrait)").matches){
+        document.getElementById(x).style.borderLeft = "0.5px solid #151f26";
+        document.getElementById(x).style.borderRight = "0.5px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 768px) and (orientation: portrait)").matches){
+        document.getElementById(x).style.borderLeft = "1px solid #151f26";
+        document.getElementById(x).style.borderRight = "1px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 1079px) and (orientation: portrait)").matches){
+        document.getElementById(x).style.borderLeft = "2px solid #151f26";
+        document.getElementById(x).style.borderRight = "2px solid #151f26";
+    }
+    else if (window.matchMedia("(max-width: 1439px) and (orientation: portrait)").matches){
+        document.getElementById(x).style.borderLeft = "3px solid #151f26";
+        document.getElementById(x).style.borderRight = "3px solid #151f26";
     }    
+    else if (window.matchMedia("(orientation: portrait)").matches){
+        document.getElementById(x).style.borderLeft = "4px solid #151f26";
+        document.getElementById(x).style.borderRight = "4px solid #151f26";
+    }   
     else{
         document.getElementById(x).style.borderTop = "4px solid #151f26";
         document.getElementById(x).style.borderBottom = "4px solid #151f26";
