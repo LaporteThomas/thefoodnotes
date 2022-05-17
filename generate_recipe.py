@@ -50,7 +50,7 @@ def write_title(f, name, color):
     f.write("\t\t<div class=\"box-header\">\n")
     f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
     f.write("\t\t\t\t<a href=\"../../index.html\" class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<img src=\"../../images/Fichier 2.png\" style =\"height:40%;margin:auto\">\n")
+    f.write("\t\t\t\t\t<p>les recettes de<br><span id=\"tooba-title\">tooba</span><span id=\"dot-title\" style=\"color:#" + color + ";\">.</span></p>\n")
     f.write("\t\t\t\t</a>\n")
     f.write("\t\t\t</div>\n")
     f.write("\t\t\t<div id=\"title\" class=\"section-title\">\n")
@@ -77,55 +77,55 @@ def write_info(f, infos, color):
 
 def write_block_info(f, info_type, info_quantity):
     f.write("\t\t\t\t\t<div class=\"infos-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<div class=\"container-inner-box\">\n")
-    f.write("\t\t\t\t\t\t\t<p><span style=\"font-weight: 700;\">" + info_type + "</span><br>" + info_quantity + "</p>\n")
-    f.write("\t\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t\t<p><span style=\"font-weight: 700;\">" + info_type + "</span><br>" + info_quantity + "</p>\n")
     f.write("\t\t\t\t\t</div>\n")
 
 
 def write_ingredient_info(f, ingredient, color):
-    f.write("\t\t\t<div class=\"section-ingredient\">\n")
-    f.write("\t\t\t\t<div class=\"container-ingredient\">\n")
-    f.write("\t\t\t\t\t<div class=\"ingredient-title-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<h2>les ingrédients<span style=\"color:#" + color + ";\">.</span></h2>\n")
-    f.write("\t\t\t\t\t</div>\n")
-    f.write("\t\t\t\t\t<div class=\"ingredient-list-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<ul>\n")
+    f.write("\t\t\t<div class=\"section-ingredient-recipe\">\n")
+    f.write("\t\t\t\t<div class=\"section-ingredient\">\n")
+    f.write("\t\t\t\t\t<div class=\"container-ingredient\">\n")
+    f.write("\t\t\t\t\t\t<div class=\"ingredient-title-inner-box\">\n")
+    f.write("\t\t\t\t\t\t\t<h2>les ingrédients<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t\t<div class=\"ingredient-list-inner-box\">\n")
+    f.write("\t\t\t\t\t\t\t<ul>\n")
 
     nb_ingredient = 0
     for list_ingredient in ingredient:
         for key, value in list_ingredient.items():
             if key == "title":
                 if nb_ingredient == 0:
-                    f.write("\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
+                    f.write("\t\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
                     nb_ingredient += 1
                 else:
-                    f.write("\t\t\t\t\t\t\t<li style=\"padding-top:25px;\">" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
+                    f.write("\t\t\t\t\t\t\t\t<li style=\"padding-top:25px;\">" + value + "<span style=\"font-weight:700;color:#" + color + ";\">.</span></li>\n")
                     nb_ingredient += 1
             else:
-                f.write("\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:400;\"> " + key + "</li>\n")
+                f.write("\t\t\t\t\t\t\t\t<li>" + value + "<span style=\"font-weight:400;\"> " + key + "</li>\n")
                 nb_ingredient += 1
     
-    f.write("\t\t\t\t\t\t</ul>\n")
+    f.write("\t\t\t\t\t\t\t</ul>\n")
+    f.write("\t\t\t\t\t\t</div>\n")
     f.write("\t\t\t\t\t</div>\n")
     f.write("\t\t\t\t</div>\n")
-    f.write("\t\t\t</div>\n")
 
 def write_recipe_step(f, recipe_step, color):
-    f.write("\t\t\t<div class=\"section-recipe\">\n")
-    f.write("\t\t\t\t<div class=\"container-recipe\">\n")
-    f.write("\t\t\t\t\t<div class=\"recipe-title-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<h2>la recette<span style=\"color:#" + color + ";\">.</span></h2>\n")
-    f.write("\t\t\t\t\t</div>\n")
-    f.write("\t\t\t\t\t<div class=\"recipe-list-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<ol>\n")
+    f.write("\t\t\t\t<div class=\"section-recipe\">\n")
+    f.write("\t\t\t\t\t<div class=\"container-recipe\">\n")
+    f.write("\t\t\t\t\t\t<div class=\"recipe-title-inner-box\">\n")
+    f.write("\t\t\t\t\t\t\t<h2>la recette<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t\t</div>\n")
+    f.write("\t\t\t\t\t\t<div class=\"recipe-list-inner-box\">\n")
+    f.write("\t\t\t\t\t\t\t<ol>\n")
 
     for step in recipe_step:
-        f.write("\t\t\t\t\t\t\t<li><span style=\"font-weight:400;\">" + step + "</span></li>\n")
+        f.write("\t\t\t\t\t\t\t\t<li><span style=\"font-weight:400;\">" + step + "</span></li>\n")
     
-    f.write("\t\t\t\t\t\t</ol>\n")
-    f.write("\t\t\t\t\t</div><!-- end container -->\n")
-    f.write("\t\t\t\t</div><!-- end section -->\n")
+    f.write("\t\t\t\t\t\t\t</ol>\n")
+    f.write("\t\t\t\t\t\t</div><!-- end container -->\n")
+    f.write("\t\t\t\t\t</div><!-- end section -->\n")
+    f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n")
 

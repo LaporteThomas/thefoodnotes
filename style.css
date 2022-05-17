@@ -92,17 +92,14 @@ ul{
     max-width: 17.5vw;
     height: 15vh;
     max-height: 15vh;
-    /* border-bottom: 5px solid #151f26; */
 }
 
 .container-header {
     display: flex;
-    /* flex-direction: column; */
     width: 17.5vw;
     max-width: 17.5vw;
     height: 15vh;
     max-height: 15vh;
-    /* text-align: center; */
 }
 
 .container-header p{
@@ -134,7 +131,10 @@ ul{
 }
 
 .container-title{
-    height: 100%;
+    width: 17.5vw;
+    height: 85vh;
+    max-width: 17.5vw;
+    max-height: 85vh;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     background-color: #eaeae7;
