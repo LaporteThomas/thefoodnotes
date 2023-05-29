@@ -15,7 +15,7 @@ def write_head():
     f.write("\t<meta name=\"viewport\" content=\"width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n\n")
  
     f.write("\t<!-- Site Metas -->\n")
-    f.write("\t<title>les recettes.</title>\n")  
+    f.write("\t<title>the food notes.</title>\n")  
     f.write("\t<meta name=\"keywords\" content=\"\">\n")
     f.write("\t<meta name=\"description\" content=\"\">\n")
     f.write("\t<meta name=\"author\" content=\"\">\n\n")
@@ -39,19 +39,20 @@ def write_header(f):
     f.write("\t\t<div class=\"box-header\">\n")
     f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
     f.write("\t\t\t\t<div class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<p>les recettes de<br><span id=\"tooba-title\">tooba</span><span id=\"dot-title\">.</span></p>\n")
+    f.write("\t\t\t\t\t<p>the food notes<span id=\"dot-title\">.</span></p>\n")
     f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n\n")
 
 def write_section_title(f):
     f.write("\t\t\t<div class=\"section-title\">\n")
     f.write("\t\t\t\t<div class=\"container-title\">\n")
-    f.write("\t\t\t\t\t<button id=\"ptitdej\" class=\"inner-box-title\">le petit-déjeuner.</button>\n")
-    f.write("\t\t\t\t\t<button id=\"gouter\" class=\"inner-box-title\">le goûter.</button>\n")
-    f.write("\t\t\t\t\t<button id=\"apero\" class=\"inner-box-title\">l'apéro.</button>\n")
-    f.write("\t\t\t\t\t<button id=\"plat\" class=\"inner-box-title\">les plats.</button>\n")
-    f.write("\t\t\t\t\t<button id=\"dessert\" class=\"inner-box-title\">les desserts.</button>\n")
-    f.write("\t\t\t\t\t<button id=\"sauce\" class=\"inner-box-title\">les sauces.</button>\n")
+    f.write("\t\t\t\t\t<ul class=\"list-title\">\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"ptitdej\" class=\"inner-box-title\">le petit-déjeuner.</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"gouter\" class=\"inner-box-title\">le goûter.</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"apero\" class=\"inner-box-title\">l'apéro.</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"plat\" class=\"inner-box-title\">les plats.</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"dessert\" class=\"inner-box-title\">les desserts.</button></li>\n")
+    f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n\n")
@@ -70,9 +71,8 @@ def write_recipe_section(f, sectionId, recipes, color):
     for r in recipes:
         generate_recipe.create_html_recipe(r, sectionId, color, recipes[index - 1], recipes[(index + 1)%len(recipes)])
         index += 1
-        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\">"+ r.name + "<span style=\"color:#" + color + ";\">.</span></a></li>\n")
+        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\"><span>"+ r.name + "</span><span style=\"color:#" + color + ";\">.</span></a></li>\n")
 
-    f.write("\t\t\t\t\t\t<li class=\"last-element\"></li>\n")
     f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div><!-- end container -->\n")
     f.write("\t\t\t</div><!-- end section -->\n\n")
@@ -84,6 +84,8 @@ def end_html(f):
     f.write("\t<!-- ALL JS FILES -->\n")
     f.write("\t<script src=\"js/all.js\"></script>\n\n")
     f.write("\t<script src=\"js/custom.js\"></script>\n\n")
+    f.write("\t<script src=\"js/jquery.textfill.js\"></script>\n\n")
+    f.write("\t<script src=\"js/jquery.textfill.min.js\"></script>\n\n")
 
     f.write("</body>\n")
     f.write("</html>\n")
