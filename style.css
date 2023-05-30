@@ -233,15 +233,20 @@ ul.recipe-inner-box{
     padding: 0px 120px;
     padding-top: 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/5)), 1fr));
-    row-gap: 70px;
+    grid-template-columns: repeat(auto-fit, 272px);
+    gap: 70px;
+    margin:auto;
+    justify-content: center;
     /* column-gap: 70px; */
     /* margin: 74px;
     padding-bottom: 148px; */
 }
 
-.recipe-inner-box li{ 
+.recipe-inner-box li{
+    margin:auto; 
     display: table;
+    /* align-self: center;
+    justify-self: center; */
     /* vertical-align: middle; */
     width: 272px;
     max-width: 272px;
