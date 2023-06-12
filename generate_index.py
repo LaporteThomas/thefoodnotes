@@ -71,7 +71,7 @@ def write_recipe_section(f, sectionId, recipes, color):
     for r in recipes:
         generate_recipe.create_html_recipe(r, sectionId, color, recipes[index - 1], recipes[(index + 1)%len(recipes)])
         index += 1
-        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\"><span>"+ r.name + "</span><span style=\"color:#" + color + ";\">.</span></a></li>\n")
+        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\"><span>"+ r.name + "<mark style=\"color:#" + color + ";\">.</mark></span></a></li>\n")
 
     f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div><!-- end container -->\n")

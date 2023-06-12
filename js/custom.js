@@ -4,7 +4,18 @@ let countButtonApero = false;
 let countButtonPlat = false;
 let countButtonDessert = false;
 let countButtonSauce = false;
+
+let changeButtonPtitDej = true;
+let changeButtonGouter = false;
+let changeButtonApero = false;
+let changeButtonPlat = false;
+let changeButtonDessert = false;
+let changeButtonSauce = false;
 $( document ).ready(function() {
+    $('a').textfill({
+        maxFontPixels: 30,
+        changeLineHeight: true
+    });
 
     $("#ptitdej").on("click",function(){
         document.getElementById("dot-title").style.color = "#fec876";
@@ -30,6 +41,14 @@ $( document ).ready(function() {
         else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
 
         if (countButtonGouter == false){countButtonGouter = toggle_element("gouter", "#ddb792");}
+
+        if (changeButtonGouter == false){
+            $('a').textfill({
+                maxFontPixels: 30,
+                changeLineHeight: true
+            });
+            changeButtonGouter = true;
+        }
     });
 
     $("#apero").on("click",function(){
@@ -43,6 +62,14 @@ $( document ).ready(function() {
         else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
 
         if (countButtonApero == false){countButtonApero = toggle_element("apero", "#d5dd9d");}
+
+        if (changeButtonApero == false){
+            $('a').textfill({
+                maxFontPixels: 30,
+                changeLineHeight: true
+            });
+            changeButtonApero = true;
+        }
     });
 
     $("#plat").on("click",function(){
@@ -56,6 +83,14 @@ $( document ).ready(function() {
         else if (countButtonDessert){countButtonDessert = untoggle_element("dessert");}
 
         if (countButtonPlat == false){countButtonPlat = toggle_element("plat", "#f58c74");}
+
+        if (changeButtonPlat == false){
+            $('a').textfill({
+                maxFontPixels: 30,
+                changeLineHeight: true
+            });
+            changeButtonPlat = true;
+        }
     });
     $("#dessert").on("click",function(){
         document.getElementById("dot-title").style.color = "#8ac5ce";
@@ -68,6 +103,14 @@ $( document ).ready(function() {
         else if (countButtonPlat){countButtonPlat = untoggle_element("plat");}
 
         if (countButtonDessert == false){countButtonDessert = toggle_element("dessert", "#8ac5ce");}
+
+        if (changeButtonDessert == false){
+            $('a').textfill({
+                maxFontPixels: 30,
+                changeLineHeight: true
+            });
+            changeButtonDessert = true;
+        }
     });
 });
 
@@ -120,8 +163,20 @@ function toggle_element(x, color){
         // document.getElementById(x).style.borderLeft = "4px solid #8ac5ce";
         document.getElementById("plat").style.borderRight = "4px solid #151f26";
     }
-    $('a').textfill({
-        maxFontPixels: 36
-    });        
+
+    // $('a').textfill({
+    //     maxFontPixels: 30,
+    //     changeLineHeight: true
+    // });
+
+    // if (window.innerWidth >= 768) {
+    //     $('a').textfill({
+    //         maxFontPixels: 30
+    //     });
+    // } else {
+    //     $('a').textfill({
+    //         maxFontPixels: 24
+    //     });
+    // }        
     return true;
 }
