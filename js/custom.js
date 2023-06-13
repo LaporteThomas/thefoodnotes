@@ -14,7 +14,9 @@ let changeButtonSauce = false;
 $( document ).ready(function() {
     $('a').textfill({
         maxFontPixels: 30,
-        changeLineHeight: true
+        changeLineHeight: true,
+        explicitWidth: 160,
+        explicitHeight: 160
     });
 
     $("#ptitdej").on("click",function(){
@@ -45,7 +47,9 @@ $( document ).ready(function() {
         if (changeButtonGouter == false){
             $('a').textfill({
                 maxFontPixels: 30,
-                changeLineHeight: true
+                changeLineHeight: true,
+                explicitWidth: 160,
+                explicitHeight: 160
             });
             changeButtonGouter = true;
         }
@@ -66,7 +70,9 @@ $( document ).ready(function() {
         if (changeButtonApero == false){
             $('a').textfill({
                 maxFontPixels: 30,
-                changeLineHeight: true
+                changeLineHeight: true,
+                explicitWidth: 160,
+                explicitHeight: 160
             });
             changeButtonApero = true;
         }
@@ -87,7 +93,9 @@ $( document ).ready(function() {
         if (changeButtonPlat == false){
             $('a').textfill({
                 maxFontPixels: 30,
-                changeLineHeight: true
+                changeLineHeight: true,
+                explicitWidth: 160,
+                explicitHeight: 160
             });
             changeButtonPlat = true;
         }
@@ -107,7 +115,9 @@ $( document ).ready(function() {
         if (changeButtonDessert == false){
             $('a').textfill({
                 maxFontPixels: 30,
-                changeLineHeight: true
+                changeLineHeight: true,
+                explicitWidth: 160,
+                explicitHeight: 160
             });
             changeButtonDessert = true;
         }

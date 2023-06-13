@@ -24,11 +24,14 @@
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
+html, body{
+	height: 100vh;
+}
 
 body {
     background-color: #EAEAE7;
     color: #151f26;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: 'Outfit';
     line-height: 1.80857;
     width:100vw;
@@ -45,10 +48,6 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-html, body{
-	height: 100vh;
 }
 
 a {
@@ -68,182 +67,156 @@ ul{
 }
 
 .box {
+    margin : 0 auto;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    /* max-width: 1460px; */
+    /* padding-left: 30px; */
+    /* padding-right: 30px; */
     height: 100vh;
-    border: 4px solid #151f26;
+    /* border: 4px solid #151f26; */
   }
 
 /* Header */
 .box-header{
-    display: flex;
-    height: 15vh;
-    max-height: 15vh;
-    width: 100vw;
-    max-width: 100vw;
-    border-bottom: 4px solid #151f26;
-    flex-direction: row;
+    width: 100%;
 }
 
 .header {
     background-color: #151f26;
-    display: block;
-    position: static;
-    height: 15vh;
-    max-height: 15vh;
-    width: 17.5vw;
-    max-width: 17.5vw;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0px;
 }
 
 .container-header {
     display: flex;
-    height: 15vh;
-    max-height: 15vh;
-    width: 17.5vw;
-    max-width: 17.5vw;
+    margin: auto;
+    width: 100%;
+    max-width: 1460px;
 }
 
 .container-header p{
-    font-size: 1.5vw;
+    font-size: 36px;
     color:#EAEAE7;
     font-weight: 700;
     margin: auto;
-    line-height: 1.8vw;
+    line-height: 100%;
+    padding: 0px 0px;
 }
 
-#tooba-title{
-    font-size: 3vw;
-}
-
-#dot-title{
-    font-size: 3vw;
-}
+/* Title Section */
 
 .section-title {
-    /* background-color: #151f26; */
-    display: block;
-    position: static;
-    width: 82.5vw;
-    height: 15vh;
+    margin: 0 auto;
+    width: 100%;
+    /* padding: 20px 0px; */
+    border-bottom: 4px solid #151f26;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
 }
 
-.container-title {
-    display: flex;
-    height:100%;
+.section-title::-webkit-scrollbar {
+    display: none;
+}
+
+.container-title{
+    margin: auto;
     width: 100%;
+    max-width: 1460px;
 }
 
 .container-title h3{
-    font-size: 2.5vw;
+    font-size: 60px;
     font-weight: 700;
-    padding-left: 1.5vw;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding: 20px 0px;
+    margin: auto;
 }
 
 
 /* Recipe Section */
 .box-recipe{
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    max-width: 100vw;
-    height: 80vh;
-    max-height:80vh;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    /* max-width: 1460px; */
 }
 
 /* Info part */
 .section-info{
-    display: block;
-    position: static;
-    width: 17.5vw;
-    max-width: 17.5vw;
-    height: 80vh;
-    max-height: 80vh;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    border-bottom: 4px solid #151f26;
+    padding: 20px 0px;
+    /* max-width: 1460px; */
 }
 
 .container-info{
-    width: 17.5vw;
-    max-width: 17.5vw;
-    height: 80vh;
-    max-height: 80vh;
+    margin: auto;
+    width: 100%;
+    max-width: 1460px;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .infos-inner-box{
-    display: flex;
-    border-bottom: 0px solid #151f26;
-    border-top: 0px solid #151f26;
-    border-left: 0px solid #151f26;
-    border-right: 4px solid #151f26;
+    width: 100%;
+    max-width: 1460px;
+    /* display: flex; */
     text-align: left;
     margin:0;
 }
 
 .infos-inner-box p{
     margin: auto;
-	font-size: 2vw;
+	font-size: 30px;
 	font-weight: 400;
-    padding: 0px;
-    line-height: 2.3vw;
+    line-height: 125%;
 }
 
 /* Ingredient part */
 .section-ingredient-recipe{
     display: flex;
     flex-direction: row;
-    width: 82.5vw;
-    max-width: 82.5vw;
-    height: 80vh;
-    max-height: 80vh;
+    margin: auto;
+    width: 100%;
+    max-width: 1460px;
 }
 
 .section-ingredient{
     display: block;
     position: static;
-    width: 32.5vw;
-    max-width: 32.5vw;
-    height: 80vh;
-    max-height: 80vh;
+    width: 33%;
 }
 
 .container-ingredient{
-    margin: 5vh 2.5vw 5vh 5vw;
-    display: grid;
-    grid-template-rows: 7.5vh 67.5vh;
-    width: 25vw;
-    height: 75vh;
-    max-width: 25vw;
-    max-height: 75vh;
+    width: 100%;
 }
 
 .ingredient-title-inner-box{
+    margin-top: 60px;
     display: flex;
     vertical-align: middle;
-    width: 25vw;
-    max-width: 25vw;
-    height: 7.5vh;
-    max-height: 7.5vh;
+    width: 100%;
 }
 
 .ingredient-title-inner-box h2{
-    font-size: 2vw;
+    font-size: 36px;
 	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
-    /* padding-left: 50px; */
 }
 
 .ingredient-list-inner-box{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    width: 25vw;
-    height: 67.5vh;
-    max-width: 25vw;
-    max-height: 67.5vh;
+    padding-top: 20px;
 }
 
 .ingredient-list-inner-box::-webkit-scrollbar {
@@ -252,47 +225,36 @@ ul{
 
 .ingredient-list-inner-box ul{
     list-style-type: none;
-    padding-bottom: 1.5vh;
+    padding-bottom: 10px;
 }
 
 .ingredient-list-inner-box li{ 
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.75vw;
-    padding-bottom: 1.5vw;
+    line-height: 150%;
+    padding-bottom: 10px;
 }
 
 /* recipe part */
 .section-recipe{
     display: block;
     position: static;
-    width: 50vw;
-    height: 80vh;
-    max-width: 50vw;
-    max-height: 80vh;
+    width: 67%;
 }
 
 .container-recipe{
-    margin : 5vh 5vw 5vh 2.5vw;
-    display: grid;
-    grid-template-rows: 7.5vh 67.5vh;
-    width: 42.5vw;
-    height: 75vh;
-    max-width: 42.5vw;
-    max-height: 75vh;
+    width: 100%;
 }
 
 .recipe-title-inner-box{
+    margin-top: 60px;
     display: flex;
     vertical-align: middle;
-    width: 42.5vw;
-    height: 7.5vh;
-    max-width: 42.5vw;
-    max-height: 7.5vh;
+    width: 100%;
 }
 
 .recipe-title-inner-box h2{
-    font-size: 2vw;
+    font-size: 36px;
 	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
@@ -302,10 +264,7 @@ ul{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    width: 42.5vw;
-    height: 67.5vh;
-    max-width: 42.5vw;
-    max-height: 67.5vh;
+    padding-top: 20px;
 }
 
 .recipe-list-inner-box::-webkit-scrollbar {
@@ -313,16 +272,14 @@ ul{
 }
 
 .recipe-list-inner-box ol{
-    margin: 0px 0px 0px 0px;
-    padding-bottom: 1vh;
-    padding-left: 1.75vw;
+    padding-bottom: 10px;
 }
 
 .recipe-list-inner-box li{ 
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.75vw;
-    padding-bottom: 1.5vw;
+    line-height: 150%;
+    padding-bottom: 10px;
 }
 
 .container-list-recipe{
