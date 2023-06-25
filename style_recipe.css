@@ -189,6 +189,8 @@ ul{
     margin: auto;
     width: 100%;
     max-width: 1460px;
+    padding-top: 60px;
+    padding-bottom: 120px;
 }
 
 .section-ingredient{
@@ -197,12 +199,8 @@ ul{
     width: 33%;
 }
 
-.container-ingredient{
-    width: 100%;
-}
-
 .ingredient-title-inner-box{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     display: flex;
     vertical-align: middle;
     width: 100%;
@@ -220,6 +218,7 @@ ul{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     padding-top: 20px;
+    /* padding-bottom: 60px; */
 }
 
 .ingredient-list-inner-box::-webkit-scrollbar {
@@ -250,7 +249,7 @@ ul{
 }
 
 .recipe-title-inner-box{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     display: flex;
     vertical-align: middle;
     width: 100%;
