@@ -13,7 +13,7 @@ def create_html_recipe(recipe, sectionId, color, recipePrevious, recipeNext):
         f.close()
 
 def write_head(recipe, color):
-    f = open(recipe + ".html", "w")
+    f = open(recipe + ".html", "w", encoding='utf-8', errors='ignore')
     f.write("<!DOCTYPE html>\n")
     f.write("<html lang=\"en\">\n\n")
 
@@ -25,7 +25,7 @@ def write_head(recipe, color):
     f.write("\t<meta name=\"viewport\" content=\"width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n\n")
  
     f.write("\t<!-- Site Metas -->\n")
-    f.write("\t<title>les recettes.</title>\n")  
+    f.write("\t<title>the food notes.</title>\n")  
     f.write("\t<meta name=\"keywords\" content=\"\">\n")
     f.write("\t<meta name=\"description\" content=\"\">\n")
     f.write("\t<meta name=\"author\" content=\"\">\n\n")
@@ -37,7 +37,7 @@ def write_head(recipe, color):
     f.write("\t<!-- Site CSS -->\n")
     f.write("\t<link rel=\"stylesheet\" href=\"../../style_recipe.css\">\n")
     f.write("\t<!-- Responsive CSS -->\n")
-    f.write("\t<link rel=\"stylesheet\" href=\"../../css/responsive_recipe.css\">\n\n")
+    f.write("\t<!-- <link rel=\"stylesheet\" href=\"../../css/responsive_recipe.css\"> -->\n\n")
 
     f.write("</head>\n")
 
@@ -50,20 +50,20 @@ def write_title(f, name, color):
     f.write("\t\t<div class=\"box-header\">\n")
     f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
     f.write("\t\t\t\t<a href=\"../../index.html\" class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<p>les recettes de<br><span id=\"tooba-title\">tooba</span><span id=\"dot-title\" style=\"color:#" + color + ";\">.</span></p>\n")
+    f.write("\t\t\t\t\t<p>the food notes<span style=\"color:#" + color + ";\">.</span></p>\n")
     f.write("\t\t\t\t</a>\n")
     f.write("\t\t\t</div>\n")
-    f.write("\t\t\t<div id=\"title\" class=\"section-title\">\n")
+    f.write("\t\t\t<div class=\"section-title\">\n")
     f.write("\t\t\t\t<div class=\"container-title\">\n")
-    f.write("\t\t\t\t\t<h3>" + name + "<span style=\"color:#" + color + ";\">.</span></h3>\n")
+    f.write("\t\t\t\t\t<h3>" +name+ "<span style=\"color:#" + color + ";\">.</span></h3>\n")
     f.write("\t\t\t\t</div>\n")
-    f.write("\t\t\t</div>\n\n")
+    f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n\n")
 
 def write_info(f, infos, color):
     f.write("\t\t<div class=\"box-recipe\">\n")
-    f.write("\t\t\t<div class=\"section-info\">\n")
-    f.write("\t\t\t\t<div class=\"container-info\" style=\"background-color: #" + color + ";\">\n")
+    f.write("\t\t\t<div class=\"section-info\" style=\"background-color: #" + color + ";\">\n")
+    f.write("\t\t\t\t<div class=\"container-info\">\n")
     for index, (key, value) in enumerate(infos.items()):
             write_block_info(f, key, value)
     

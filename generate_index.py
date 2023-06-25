@@ -3,7 +3,7 @@ from operator import attrgetter
 import generate_recipe
 
 def write_head():
-    f = open("index.html", "w")
+    f = open("index.html", "w", encoding='utf-8', errors='ignore')
     f.write("<!DOCTYPE html>\n")
     f.write("<html lang=\"en\">\n\n")
 
