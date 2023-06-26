@@ -27,21 +27,21 @@
 <body>
 
 	<div class="box">
-		<div class="box-header">
-			<div id="header" class="header">
+		<div id="header" class="box-header">
+			<div class="header">
 				<a href="../../index.html" class="container-header">
 					<p>the food notes<span style="color:#fec876;">.</span></p>
 				</a>
 			</div>
 			<div class="section-title">
 				<div class="container-title">
-					<h3>le pain perdu<span style="color:#fec876;">.</span></h3>
+					<h3></span>le pain perdu<mark style="color:#fec876;">.</mark></span></h3>
 				</div>
 			</div>
 		</div>
 
-		<div class="box-recipe">
-			<div class="section-info" style="background-color: #fec876;">
+		<div id="recipe" class="box-recipe">
+			<div id="sectioninfo" class="section-info" style="background-color: #fec876;">
 				<div class="container-info">
 					<div class="infos-inner-box">
 						<p><span style="font-weight: 700;">pour</span><br>4 personnes</p>
@@ -57,31 +57,27 @@
 				</div><!-- end container -->
 			</div><!-- end section -->
 
-			<div class="section-ingredient-recipe">
+			<div id="sectioningredientrecipe" class="section-ingredient-recipe">
 				<div class="section-ingredient">
-					<div class="container-ingredient">
-						<div class="ingredient-title-inner-box">
-							<h2>les ingrédients<span style="color:#fec876;">.</span></h2>
-						</div>
-						<div class="ingredient-list-inner-box">
-							<ul>
-								<li>1 pincée<span style="font-weight:400;"> de canelle</li>
-								<li>30 g<span style="font-weight:400;"> d'huile de coco</li>
-								<li>20 cl<span style="font-weight:400;"> de lait écrémé</li>
-								<li>1<span style="font-weight:400;"> œuf</li>
-								<li>4 tranches<span style="font-weight:400;"> de pain complet rassis</li>
-								<li>1 c. à s.<span style="font-weight:400;"> de sucre de fleur de coco brun</li>
-							</ul>
-						</div>
+					<div id="ingredienttitleinnerbox" class="ingredient-title-inner-box">
+						<h2>les ingrédients<span style="color:#fec876;">.</span></h2>
 					</div>
+						<ul id="ingredientlistinnerbox" class="ingredient-list-inner-box">
+							<li>1 pincée<span style="font-weight:400;"> de canelle</li>
+							<li>30 g<span style="font-weight:400;"> d'huile de coco</li>
+							<li>20 cl<span style="font-weight:400;"> de lait écrémé</li>
+							<li>1<span style="font-weight:400;"> œuf</li>
+							<li>4 tranches<span style="font-weight:400;"> de pain complet rassis</li>
+							<li>1 c. à s.<span style="font-weight:400;"> de sucre de fleur de coco brun</li>
+						</ul>
 				</div>
 				<div class="section-recipe">
 					<div class="container-recipe">
-						<div class="recipe-title-inner-box">
+						<div id="ingredienttitleinnerbox" class="recipe-title-inner-box">
 							<h2>la recette<span style="color:#fec876;">.</span></h2>
 						</div>
 						<div class="recipe-list-inner-box">
-							<ol>
+							<ol id="ingredientlistinnerbox">
 								<li><span style="font-weight:400;">Battre l’œuf.</span></li>
 								<li><span style="font-weight:400;">Mélanger l’œuf battu, le lait, le sucre et la cannelle dans un plat.</span></li>
 								<li><span style="font-weight:400;">Laisser imbiber les tranches de pain dans le mélange.</span></li>
@@ -94,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section-list-recipe">
+		<div class="section-list-recipe" id="bottom">
 			<div class="container-list-recipe">
 				<a class="recipe-previous recipe-ptitdej" href="./painaulait.html">
 					<h2>🞀 les pains au lait<span style="color:#fec876;">.</span></h2>
@@ -107,5 +103,8 @@
 	</div>
 	<!-- ALL JS FILES -->
 	<script src="../../js/all.js"></script>
+	<script src="../../js/js_recipe.js"></script>
+	<script src="../../js/jquery.textfill.js"></script>
+	<script src="../../js/jquery.textfill.min.js"></script>
 </body>
 </html>

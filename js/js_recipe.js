@@ -1,30 +1,39 @@
-// Get references to the class block and other block
-var classBlock = document.getElementById('recipe');
-var headerBlock = document.getElementById('header');
-var bottomBlock = document.getElementById('bottom');
+$( document ).ready(function() {
 
-// Calculate the desired height
-var windowHeight = window.innerHeight;
-var headerBlockHeight = headerBlock.offsetHeight;
-var bottomBlockHeight = bottomBlock.offsetHeight;
-// var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - classBlock.style.paddingTop - classBlock.style.paddingBottom;
-var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - 60 - 60;
+    // Get references to the class block and other block
+    var classBlock = document.getElementById('recipe');
+    var headerBlock = document.getElementById('header');
+    var bottomBlock = document.getElementById('bottom');
 
-// Set the height of the class block
-classBlock.style.height = classBlockHeight + 'px';
+    // Calculate the desired height
+    var windowHeight = window.innerHeight;
+    var headerBlockHeight = headerBlock.offsetHeight;
+    var bottomBlockHeight = bottomBlock.offsetHeight;
+    // var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - classBlock.style.paddingTop - classBlock.style.paddingBottom;
+    var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - 60 - 60;
 
-var sectionInfoBlock = document.getElementById('sectioninfo')
-var ingredientRecipeBlock = document.getElementById('sectioningredientrecipe')
+    // Set the height of the class block
+    classBlock.style.height = classBlockHeight + 'px';
 
-var sectionInfoBlockHeight = sectionInfoBlock.offsetHeight;
-var ingredientRecipeBlockHeight = classBlockHeight - sectionInfoBlockHeight;
+    var sectionInfoBlock = document.getElementById('sectioninfo')
+    var ingredientRecipeBlock = document.getElementById('sectioningredientrecipe')
 
-ingredientRecipeBlock.style.height = ingredientRecipeBlockHeight + 'px';
+    var sectionInfoBlockHeight = sectionInfoBlock.offsetHeight;
+    var ingredientRecipeBlockHeight = classBlockHeight - sectionInfoBlockHeight;
 
-var ingredienttitleinnerboxBlock = document.getElementById('ingredienttitleinnerbox')
-var ingredientlistinnerboxBlock = document.getElementById('ingredientlistinnerbox')
+    ingredientRecipeBlock.style.height = ingredientRecipeBlockHeight + 'px';
 
-var ingredienttitleinnerboxBlockHeight = ingredienttitleinnerboxBlock.offsetHeight;
-var ingredientlistinnerboxBlockHeight = ingredientRecipeBlockHeight - ingredienttitleinnerboxBlockHeight - 40;
+    var ingredienttitleinnerboxBlock = document.getElementById('ingredienttitleinnerbox')
+    var ingredientlistinnerboxBlock = document.getElementById('ingredientlistinnerbox')
 
-ingredientlistinnerboxBlock.style.height = ingredientlistinnerboxBlockHeight + 'px';
+    var ingredienttitleinnerboxBlockHeight = ingredienttitleinnerboxBlock.offsetHeight;
+    var ingredientlistinnerboxBlockHeight = ingredientRecipeBlockHeight - ingredienttitleinnerboxBlockHeight - 40;
+
+    ingredientlistinnerboxBlock.style.height = ingredientlistinnerboxBlockHeight + 'px';
+
+    $('h3').textfill({
+        maxFontPixels: 60,
+        explicitWidth: 1460
+        // explicitHeight: 1460
+    });
+});

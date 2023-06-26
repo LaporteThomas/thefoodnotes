@@ -27,21 +27,21 @@
 <body>
 
 	<div class="box">
-		<div class="box-header">
-			<div id="header" class="header">
+		<div id="header" class="box-header">
+			<div class="header">
 				<a href="../../index.html" class="container-header">
 					<p>the food notes<span style="color:#8ac5ce;">.</span></p>
 				</a>
 			</div>
 			<div class="section-title">
 				<div class="container-title">
-					<h3>la tarte aux fraises<span style="color:#8ac5ce;">.</span></h3>
+					<h3></span>la tarte aux fraises<mark style="color:#8ac5ce;">.</mark></span></h3>
 				</div>
 			</div>
 		</div>
 
-		<div class="box-recipe">
-			<div class="section-info" style="background-color: #8ac5ce;">
+		<div id="recipe" class="box-recipe">
+			<div id="sectioninfo" class="section-info" style="background-color: #8ac5ce;">
 				<div class="container-info">
 					<div class="infos-inner-box">
 						<p><span style="font-weight: 700;">pour</span><br>8 personnes</p>
@@ -57,32 +57,28 @@
 				</div><!-- end container -->
 			</div><!-- end section -->
 
-			<div class="section-ingredient-recipe">
+			<div id="sectioningredientrecipe" class="section-ingredient-recipe">
 				<div class="section-ingredient">
-					<div class="container-ingredient">
-						<div class="ingredient-title-inner-box">
-							<h2>les ingrédients<span style="color:#8ac5ce;">.</span></h2>
-						</div>
-						<div class="ingredient-list-inner-box">
-							<ul>
-								<li>120 g<span style="font-weight:400;"> de beurre demi-sel</li>
-								<li>20 cl<span style="font-weight:400;"> de crème liquide</li>
-								<li>200 g<span style="font-weight:400;"> de farine</li>
-								<li>500 g<span style="font-weight:400;"> de fraises</li>
-								<li>250 g<span style="font-weight:400;"> de mascarpone</li>
-								<li>1<span style="font-weight:400;"> petit suisse</li>
-								<li>100 g<span style="font-weight:400;"> de sucre en poudre</li>
-							</ul>
-						</div>
+					<div id="ingredienttitleinnerbox" class="ingredient-title-inner-box">
+						<h2>les ingrédients<span style="color:#8ac5ce;">.</span></h2>
 					</div>
+						<ul id="ingredientlistinnerbox" class="ingredient-list-inner-box">
+							<li>120 g<span style="font-weight:400;"> de beurre demi-sel</li>
+							<li>20 cl<span style="font-weight:400;"> de crème liquide</li>
+							<li>200 g<span style="font-weight:400;"> de farine</li>
+							<li>500 g<span style="font-weight:400;"> de fraises</li>
+							<li>250 g<span style="font-weight:400;"> de mascarpone</li>
+							<li>1<span style="font-weight:400;"> petit suisse</li>
+							<li>100 g<span style="font-weight:400;"> de sucre en poudre</li>
+						</ul>
 				</div>
 				<div class="section-recipe">
 					<div class="container-recipe">
-						<div class="recipe-title-inner-box">
+						<div id="ingredienttitleinnerbox" class="recipe-title-inner-box">
 							<h2>la recette<span style="color:#8ac5ce;">.</span></h2>
 						</div>
 						<div class="recipe-list-inner-box">
-							<ol>
+							<ol id="ingredientlistinnerbox">
 								<li><span style="font-weight:400;">Préchauffer le four à 180° C.</span></li>
 								<li><span style="font-weight:400;">Dans un récipient, mélanger la farine, le beurre demi-sel, le sucre et une pincée de sel, jusqu’à l’obtention d’une pâte sableuse.</span></li>
 								<li><span style="font-weight:400;">Verser la pâte dans un moule à tarte et l’aplatir en formant bien les bords. Raser les bords à l’aide d’un couteau pour qu’ils soient réguliers.</span></li>
@@ -96,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section-list-recipe">
+		<div class="section-list-recipe" id="bottom">
 			<div class="container-list-recipe">
 				<a class="recipe-previous recipe-dessert" href="./tartechocolat.html">
 					<h2>🞀 la tarte au chocolat<span style="color:#8ac5ce;">.</span></h2>
@@ -109,5 +105,8 @@
 	</div>
 	<!-- ALL JS FILES -->
 	<script src="../../js/all.js"></script>
+	<script src="../../js/js_recipe.js"></script>
+	<script src="../../js/jquery.textfill.js"></script>
+	<script src="../../js/jquery.textfill.min.js"></script>
 </body>
 </html>

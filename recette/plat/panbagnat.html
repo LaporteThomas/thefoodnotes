@@ -27,21 +27,21 @@
 <body>
 
 	<div class="box">
-		<div class="box-header">
-			<div id="header" class="header">
+		<div id="header" class="box-header">
+			<div class="header">
 				<a href="../../index.html" class="container-header">
 					<p>the food notes<span style="color:#f58c74;">.</span></p>
 				</a>
 			</div>
 			<div class="section-title">
 				<div class="container-title">
-					<h3>le pan bagnat<span style="color:#f58c74;">.</span></h3>
+					<h3></span>le pan bagnat<mark style="color:#f58c74;">.</mark></span></h3>
 				</div>
 			</div>
 		</div>
 
-		<div class="box-recipe">
-			<div class="section-info" style="background-color: #f58c74;">
+		<div id="recipe" class="box-recipe">
+			<div id="sectioninfo" class="section-info" style="background-color: #f58c74;">
 				<div class="container-info">
 					<div class="infos-inner-box">
 						<p><span style="font-weight: 700;">pour</span><br>4 personnes</p>
@@ -57,39 +57,35 @@
 				</div><!-- end container -->
 			</div><!-- end section -->
 
-			<div class="section-ingredient-recipe">
+			<div id="sectioningredientrecipe" class="section-ingredient-recipe">
 				<div class="section-ingredient">
-					<div class="container-ingredient">
-						<div class="ingredient-title-inner-box">
-							<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
-						</div>
-						<div class="ingredient-list-inner-box">
-							<ul>
-								<li>1 gousse<span style="font-weight:400;"> d'ail</li>
-								<li>8 filets<span style="font-weight:400;"> d'anchois</li>
-								<li>4<span style="font-weight:400;"> artichaut violets</li>
-								<li>quelques feuilles<span style="font-weight:400;"> de basilic</li>
-								<li>3<span style="font-weight:400;"> cébettes</li>
-								<li>30 g<span style="font-weight:400;"> de févettes cuites</li>
-								<li>4<span style="font-weight:400;"> œufs</li>
-								<li>douzaine<span style="font-weight:400;"> d'olive noires</li>
-								<li>4<span style="font-weight:400;"> pains ronds</li>
-								<li>1<span style="font-weight:400;"> povron vert</li>
-								<li>10<span style="font-weight:400;"> radis</li>
-								<li>2<span style="font-weight:400;"> tomates très mures</li>
-								<li>4<span style="font-weight:400;"> tomates mures</li>
-								<li>120 g<span style="font-weight:400;"> de thon</li>
-							</ul>
-						</div>
+					<div id="ingredienttitleinnerbox" class="ingredient-title-inner-box">
+						<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
 					</div>
+						<ul id="ingredientlistinnerbox" class="ingredient-list-inner-box">
+							<li>1 gousse<span style="font-weight:400;"> d'ail</li>
+							<li>8 filets<span style="font-weight:400;"> d'anchois</li>
+							<li>4<span style="font-weight:400;"> artichaut violets</li>
+							<li>quelques feuilles<span style="font-weight:400;"> de basilic</li>
+							<li>3<span style="font-weight:400;"> cébettes</li>
+							<li>30 g<span style="font-weight:400;"> de févettes cuites</li>
+							<li>4<span style="font-weight:400;"> œufs</li>
+							<li>douzaine<span style="font-weight:400;"> d'olive noires</li>
+							<li>4<span style="font-weight:400;"> pains ronds</li>
+							<li>1<span style="font-weight:400;"> povron vert</li>
+							<li>10<span style="font-weight:400;"> radis</li>
+							<li>2<span style="font-weight:400;"> tomates très mures</li>
+							<li>4<span style="font-weight:400;"> tomates mures</li>
+							<li>120 g<span style="font-weight:400;"> de thon</li>
+						</ul>
 				</div>
 				<div class="section-recipe">
 					<div class="container-recipe">
-						<div class="recipe-title-inner-box">
+						<div id="ingredienttitleinnerbox" class="recipe-title-inner-box">
 							<h2>la recette<span style="color:#f58c74;">.</span></h2>
 						</div>
 						<div class="recipe-list-inner-box">
-							<ol>
+							<ol id="ingredientlistinnerbox">
 								<li><span style="font-weight:400;">Faire cuire les œufs durs, les laisser refroidir et les écaler.</span></li>
 								<li><span style="font-weight:400;">Couper les pains en deux en laissant une partie basse plus importante.</span></li>
 								<li><span style="font-weight:400;">Retirer la mie de la partie basse et frotter l'intérieur du pain avec la gousse d'ail.</span></li>
@@ -107,7 +103,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section-list-recipe">
+		<div class="section-list-recipe" id="bottom">
 			<div class="container-list-recipe">
 				<a class="recipe-previous recipe-plat" href="./painhotdog.html">
 					<h2>🞀 le pain hot-dog<span style="color:#f58c74;">.</span></h2>
@@ -120,5 +116,8 @@
 	</div>
 	<!-- ALL JS FILES -->
 	<script src="../../js/all.js"></script>
+	<script src="../../js/js_recipe.js"></script>
+	<script src="../../js/jquery.textfill.js"></script>
+	<script src="../../js/jquery.textfill.min.js"></script>
 </body>
 </html>

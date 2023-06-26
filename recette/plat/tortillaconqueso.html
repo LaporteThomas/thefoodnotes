@@ -27,21 +27,21 @@
 <body>
 
 	<div class="box">
-		<div class="box-header">
-			<div id="header" class="header">
+		<div id="header" class="box-header">
+			<div class="header">
 				<a href="../../index.html" class="container-header">
 					<p>the food notes<span style="color:#f58c74;">.</span></p>
 				</a>
 			</div>
 			<div class="section-title">
 				<div class="container-title">
-					<h3>la tortilla con queso<span style="color:#f58c74;">.</span></h3>
+					<h3></span>la tortilla con queso<mark style="color:#f58c74;">.</mark></span></h3>
 				</div>
 			</div>
 		</div>
 
-		<div class="box-recipe">
-			<div class="section-info" style="background-color: #f58c74;">
+		<div id="recipe" class="box-recipe">
+			<div id="sectioninfo" class="section-info" style="background-color: #f58c74;">
 				<div class="container-info">
 					<div class="infos-inner-box">
 						<p><span style="font-weight: 700;">pour</span><br>4 personnes</p>
@@ -57,31 +57,27 @@
 				</div><!-- end container -->
 			</div><!-- end section -->
 
-			<div class="section-ingredient-recipe">
+			<div id="sectioningredientrecipe" class="section-ingredient-recipe">
 				<div class="section-ingredient">
-					<div class="container-ingredient">
-						<div class="ingredient-title-inner-box">
-							<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
-						</div>
-						<div class="ingredient-list-inner-box">
-							<ul>
-								<li>2 gousses<span style="font-weight:400;"> d'ail</li>
-								<li>8 tranches<span style="font-weight:400;"> de cheddar</li>
-								<li>3 tranches<span style="font-weight:400;"> de jambon cru</li>
-								<li>5<span style="font-weight:400;"> œufs</li>
-								<li>1<span style="font-weight:400;"> oignon</li>
-								<li>400 g<span style="font-weight:400;"> de pommes de terre</li>
-							</ul>
-						</div>
+					<div id="ingredienttitleinnerbox" class="ingredient-title-inner-box">
+						<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
 					</div>
+						<ul id="ingredientlistinnerbox" class="ingredient-list-inner-box">
+							<li>2 gousses<span style="font-weight:400;"> d'ail</li>
+							<li>8 tranches<span style="font-weight:400;"> de cheddar</li>
+							<li>3 tranches<span style="font-weight:400;"> de jambon cru</li>
+							<li>5<span style="font-weight:400;"> œufs</li>
+							<li>1<span style="font-weight:400;"> oignon</li>
+							<li>400 g<span style="font-weight:400;"> de pommes de terre</li>
+						</ul>
 				</div>
 				<div class="section-recipe">
 					<div class="container-recipe">
-						<div class="recipe-title-inner-box">
+						<div id="ingredienttitleinnerbox" class="recipe-title-inner-box">
 							<h2>la recette<span style="color:#f58c74;">.</span></h2>
 						</div>
 						<div class="recipe-list-inner-box">
-							<ol>
+							<ol id="ingredientlistinnerbox">
 								<li><span style="font-weight:400;">Faire chauffer 1 c. à s. d'huile d'olive dans une grande poêle à feu moyen.</span></li>
 								<li><span style="font-weight:400;">Ajouter les pommes de terre épluchées et taillées en petits dés, l'oignon et l'ail hachés, puis laisser cuire pendant 15 minutes.</span></li>
 								<li><span style="font-weight:400;">Débarrasser le tout dans un saladier, puis écraser l'ensemble à l'aide d'un presse-purée ou d'une fourchette.</span></li>
@@ -96,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section-list-recipe">
+		<div class="section-list-recipe" id="bottom">
 			<div class="container-list-recipe">
 				<a class="recipe-previous recipe-plat" href="./tomatesfarciesbufala.html">
 					<h2>🞀 les tomates farcies au four, bufala et pesto de pistaches<span style="color:#f58c74;">.</span></h2>
@@ -109,5 +105,8 @@
 	</div>
 	<!-- ALL JS FILES -->
 	<script src="../../js/all.js"></script>
+	<script src="../../js/js_recipe.js"></script>
+	<script src="../../js/jquery.textfill.js"></script>
+	<script src="../../js/jquery.textfill.min.js"></script>
 </body>
 </html>

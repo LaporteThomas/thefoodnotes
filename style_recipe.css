@@ -135,8 +135,13 @@ ul{
     font-weight: 700;
     padding: 20px 0px;
     margin: auto;
+    width: 100%;
+    max-width: 1460px;
 }
 
+mark{
+    background: none;
+}
 
 /* Recipe Section */
 .box-recipe{

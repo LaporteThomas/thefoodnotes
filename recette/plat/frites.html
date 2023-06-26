@@ -27,21 +27,21 @@
 <body>
 
 	<div class="box">
-		<div class="box-header">
-			<div id="header" class="header">
+		<div id="header" class="box-header">
+			<div class="header">
 				<a href="../../index.html" class="container-header">
 					<p>the food notes<span style="color:#f58c74;">.</span></p>
 				</a>
 			</div>
 			<div class="section-title">
 				<div class="container-title">
-					<h3>les frites<span style="color:#f58c74;">.</span></h3>
+					<h3></span>les frites<mark style="color:#f58c74;">.</mark></span></h3>
 				</div>
 			</div>
 		</div>
 
-		<div class="box-recipe">
-			<div class="section-info" style="background-color: #f58c74;">
+		<div id="recipe" class="box-recipe">
+			<div id="sectioninfo" class="section-info" style="background-color: #f58c74;">
 				<div class="container-info">
 					<div class="infos-inner-box">
 						<p><span style="font-weight: 700;">pour</span><br>4 personnes</p>
@@ -57,26 +57,22 @@
 				</div><!-- end container -->
 			</div><!-- end section -->
 
-			<div class="section-ingredient-recipe">
+			<div id="sectioningredientrecipe" class="section-ingredient-recipe">
 				<div class="section-ingredient">
-					<div class="container-ingredient">
-						<div class="ingredient-title-inner-box">
-							<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
-						</div>
-						<div class="ingredient-list-inner-box">
-							<ul>
-								<li>600 g<span style="font-weight:400;"> de pommes de terre de type bintje ou de patates douces</li>
-							</ul>
-						</div>
+					<div id="ingredienttitleinnerbox" class="ingredient-title-inner-box">
+						<h2>les ingrédients<span style="color:#f58c74;">.</span></h2>
 					</div>
+						<ul id="ingredientlistinnerbox" class="ingredient-list-inner-box">
+							<li>600 g<span style="font-weight:400;"> de pommes de terre de type bintje ou de patates douces</li>
+						</ul>
 				</div>
 				<div class="section-recipe">
 					<div class="container-recipe">
-						<div class="recipe-title-inner-box">
+						<div id="ingredienttitleinnerbox" class="recipe-title-inner-box">
 							<h2>la recette<span style="color:#f58c74;">.</span></h2>
 						</div>
 						<div class="recipe-list-inner-box">
-							<ol>
+							<ol id="ingredientlistinnerbox">
 								<li><span style="font-weight:400;">Laver et bien frotter la peau des pommes de terre à l'eau froide pour retirer la terre.</span></li>
 								<li><span style="font-weight:400;">Couper les patates en frites un peu épaisses.</span></li>
 								<li><span style="font-weight:400;">Les rincer dans une grande quantité d'eau froide puis bien les sécher dans un torchon propre et sec.</span></li>
@@ -90,7 +86,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section-list-recipe">
+		<div class="section-list-recipe" id="bottom">
 			<div class="container-list-recipe">
 				<a class="recipe-previous recipe-plat" href="./fishchips.html">
 					<h2>🞀 le fish & chips<span style="color:#f58c74;">.</span></h2>
@@ -103,5 +99,8 @@
 	</div>
 	<!-- ALL JS FILES -->
 	<script src="../../js/all.js"></script>
+	<script src="../../js/js_recipe.js"></script>
+	<script src="../../js/jquery.textfill.js"></script>
+	<script src="../../js/jquery.textfill.min.js"></script>
 </body>
 </html>
