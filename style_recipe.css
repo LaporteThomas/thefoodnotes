@@ -195,7 +195,7 @@ mark{
     width: 100%;
     max-width: 1460px;
     padding-top: 60px;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
 }
 
 .section-ingredient{
@@ -209,6 +209,7 @@ mark{
     display: flex;
     vertical-align: middle;
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .ingredient-title-inner-box h2{
@@ -222,7 +223,7 @@ mark{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    padding-top: 20px;
+    /* padding-top: 20px; */
     /* padding-bottom: 60px; */
 }
 
@@ -258,6 +259,7 @@ mark{
     display: flex;
     vertical-align: middle;
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .recipe-title-inner-box h2{
@@ -271,7 +273,9 @@ mark{
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .recipe-list-inner-box::-webkit-scrollbar {
@@ -280,6 +284,7 @@ mark{
 
 .recipe-list-inner-box ol{
     padding-bottom: 10px;
+    
 }
 
 .recipe-list-inner-box li{ 

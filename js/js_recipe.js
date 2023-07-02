@@ -10,7 +10,11 @@ $( document ).ready(function() {
     var headerBlockHeight = headerBlock.offsetHeight;
     var bottomBlockHeight = bottomBlock.offsetHeight;
     // var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - classBlock.style.paddingTop - classBlock.style.paddingBottom;
-    var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight - 60 - 60;
+    var classBlockHeight = windowHeight - headerBlockHeight - bottomBlockHeight;
+    console.log(windowHeight)
+    console.log(headerBlockHeight)
+    console.log(bottomBlockHeight)
+    console.log(classBlockHeight)
 
     // Set the height of the class block
     classBlock.style.height = classBlockHeight + 'px';
@@ -19,7 +23,13 @@ $( document ).ready(function() {
     var ingredientRecipeBlock = document.getElementById('sectioningredientrecipe')
 
     var sectionInfoBlockHeight = sectionInfoBlock.offsetHeight;
-    var ingredientRecipeBlockHeight = classBlockHeight - sectionInfoBlockHeight;
+    // var ingredientlistinnerboxBlockPadding = ingredientRecipeBlock.style.paddingTop;
+    var ingredientlistinnerboxBlockPadding = parseInt(window.getComputedStyle(ingredientRecipeBlock).getPropertyValue('padding-top'));
+    var ingredientRecipeBlockHeight = classBlockHeight - sectionInfoBlockHeight - ingredientlistinnerboxBlockPadding;
+
+    console.log(sectionInfoBlockHeight)
+    console.log(ingredientlistinnerboxBlockPadding)
+    console.log(ingredientRecipeBlockHeight)
 
     ingredientRecipeBlock.style.height = ingredientRecipeBlockHeight + 'px';
 
@@ -27,9 +37,17 @@ $( document ).ready(function() {
     var ingredientlistinnerboxBlock = document.getElementById('ingredientlistinnerbox')
 
     var ingredienttitleinnerboxBlockHeight = ingredienttitleinnerboxBlock.offsetHeight;
-    var ingredientlistinnerboxBlockHeight = ingredientRecipeBlockHeight - ingredienttitleinnerboxBlockHeight - 40;
+    var ingredientlistinnerboxBlockHeight = ingredientRecipeBlockHeight - ingredienttitleinnerboxBlockHeight - 20;
 
     ingredientlistinnerboxBlock.style.height = ingredientlistinnerboxBlockHeight + 'px';
+
+    var recipetitleinnerboxBlock = document.getElementById('recipetitleinnerbox')
+    var recipelistinnerboxBlock = document.getElementById('recipelistinnerbox')
+
+    var recipetitleinnerboxBlockHeight = recipetitleinnerboxBlock.offsetHeight;
+    var recipelistinnerboxBlockHeight = ingredientRecipeBlockHeight - recipetitleinnerboxBlockHeight - 20;
+
+    recipelistinnerboxBlock.style.height = recipelistinnerboxBlockHeight + 'px';
 
     $('h3').textfill({
         maxFontPixels: 60,
