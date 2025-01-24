@@ -49,7 +49,7 @@ def sort_list(list_recipe):
 
 def read_csv_recipe(filename):
     list_recipe = []
-    with open(filename, newline='') as csvfile:
+    with open(filename, newline='', encoding='utf-8', errors='ignore') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=';')
         line_count = 0
         name=""
