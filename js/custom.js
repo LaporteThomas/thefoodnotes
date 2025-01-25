@@ -20,7 +20,7 @@ $( document ).ready(function() {
     });
 
     $("#ptitdej").on("click",function(){
-        document.getElementById("dot-title").style.color = "#fec876";
+        document.getElementById("title-list").textContent="p'tit-déj";
         if (countButtonGouter){countButtonGouter = untoggle_element("gouter");}
 
         else if (countButtonApero){ countButtonApero = untoggle_element("apero");}
@@ -33,7 +33,7 @@ $( document ).ready(function() {
     });
 
     $("#gouter").on("click",function(){
-        document.getElementById("dot-title").style.color = "#ddb792";
+        document.getElementById("title-list").textContent="goûter";
         if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
 
         else if (countButtonApero){ countButtonApero = untoggle_element("apero");}
@@ -56,7 +56,7 @@ $( document ).ready(function() {
     });
 
     $("#apero").on("click",function(){
-        document.getElementById("dot-title").style.color = "#d5dd9d";
+        document.getElementById("title-list").textContent="apéro";
         if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
 
         else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
@@ -79,7 +79,7 @@ $( document ).ready(function() {
     });
 
     $("#plat").on("click",function(){
-        document.getElementById("dot-title").style.color = "#f58c74";
+        document.getElementById("title-list").textContent="plat";
         if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
 
         else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
@@ -101,7 +101,7 @@ $( document ).ready(function() {
         }
     });
     $("#dessert").on("click",function(){
-        document.getElementById("dot-title").style.color = "#8ac5ce";
+        document.getElementById("title-list").textContent="dessert";
         if (countButtonPtitDej){countButtonPtitDej = untoggle_element("ptitdej");}
 
         else if (countButtonGouter){ countButtonGouter = untoggle_element("gouter");}
@@ -126,67 +126,13 @@ $( document ).ready(function() {
 
 function untoggle_element(x){
     $("".concat("#recipe-", x, "-container")).toggle();
-    document.getElementById(x).style.backgroundColor = "#EAEAE7";
-    if (x=="ptitdej"){
-        document.getElementById(x).style.borderLeft = "4px solid #EAEAE7";
-    }
-    else if (x=="gouter"){
-        document.getElementById("ptitdej").style.borderRight = "4px solid #EAEAE7";
-    }
-    else if (x=="apero"){
-        document.getElementById("gouter").style.borderRight = "4px solid #EAEAE7";
-    }
-    else if (x=="plat"){
-        document.getElementById("apero").style.borderRight = "4px solid #EAEAE7";
-    }
-    else if (x=="dessert"){
-        document.getElementById("plat").style.borderRight = "4px solid #EAEAE7";
-    }
-    document.getElementById(x).style.borderRight = "4px solid #EAEAE7";
+    document.getElementById(x).style.fontWeight = 400;
+    
     return false;
 }
 
 function toggle_element(x, color){
     $("".concat("#recipe-", x, "-container")).toggle();
-    document.getElementById(x).style.backgroundColor = color;
-    if (x=="ptitdej"){
-        document.getElementById(x).style.borderLeft = "4px solid #151f26";
-        document.getElementById(x).style.borderRight = "4px solid #151f26";
-    }
-    else if (x=="gouter"){
-        document.getElementById(x).style.borderRight = "4px solid #151f26";
-        // document.getElementById(x).style.borderLeft = "4px solid #ddb792";
-        document.getElementById("ptitdej").style.borderRight = "4px solid #151f26";
-    }
-    else if (x=="apero"){
-        document.getElementById(x).style.borderRight = "4px solid #151f26";
-        // document.getElementById(x).style.borderLeft = "4px solid #d5dd9d";
-        document.getElementById("gouter").style.borderRight = "4px solid #151f26";
-    }
-    else if (x=="plat"){
-        document.getElementById(x).style.borderRight = "4px solid #151f26";
-        // document.getElementById(x).style.borderLeft = "4px solid #f58c74";
-        document.getElementById("apero").style.borderRight = "4px solid #151f26";
-    }   
-    else if (x=="dessert"){
-        document.getElementById(x).style.borderRight = "4px solid #151f26";
-        // document.getElementById(x).style.borderLeft = "4px solid #8ac5ce";
-        document.getElementById("plat").style.borderRight = "4px solid #151f26";
-    }
-
-    // $('a').textfill({
-    //     maxFontPixels: 30,
-    //     changeLineHeight: true
-    // });
-
-    // if (window.innerWidth >= 768) {
-    //     $('a').textfill({
-    //         maxFontPixels: 30
-    //     });
-    // } else {
-    //     $('a').textfill({
-    //         maxFontPixels: 24
-    //     });
-    // }        
+    document.getElementById(x).style.fontWeight = 900;   
     return true;
 }

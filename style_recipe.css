@@ -6,9 +6,9 @@
     IMPORT FONTS
 -------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -83,28 +83,70 @@ ul{
 .box-header{
     width: 100%;
 }
+/* Title Section */
 
-.header {
-    background-color: #151f26;
+.section-title {
     margin: 0 auto;
     width: 100%;
-    padding: 20px 0px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
 }
 
-.container-header {
-    display: flex;
+.section-title::-webkit-scrollbar {
+    display: none;
+}
+
+.container-title{
     margin: auto;
     width: 100%;
-    max-width: 1460px;
+    /* max-width: 1920; */
 }
 
-.container-header p{
-    font-size: 36px;
-    color:#EAEAE7;
-    font-weight: 700;
+ul.list-title{
+    list-style: none;
     margin: auto;
-    line-height: 100%;
-    padding: 0px 0px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    padding: 25px 50px 0px 0px;
+    float: right;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(5, auto);
+    /* background-color: #FBFBFB; */
+}
+
+.button {
+    background: #FBFBFB;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: block;
+}
+
+.button:focus {
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.inner-box-title{
+    background-color: #FBFBFB;
+    color: #151419;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Alexandria", serif;
+    border: 0px solid #FBFBFB;
+    cursor:pointer;
+    text-align: center;
+    /* width: 150px; */
+    /* margin-left: 50px; */
+    text-transform: uppercase;
 }
 
 /* Title Section */
