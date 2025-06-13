@@ -6,9 +6,8 @@
     IMPORT FONTS
 -------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -29,13 +28,13 @@ html, body{
 }
 
 body {
-    background-color: #EAEAE7;
-    color: #151f26;
+    background-color: #FBFBFB;
+    color: #151419;
     /* font-size: 18px; */
-    font-family: 'Outfit';
+    font-family: "Alexandria", serif;
     line-height: 1.80857;
     width:100vw;
-    /* max-width: 800px; */
+    max-width: 1920px;
     margin-left:auto;
     margin-right:auto;
     margin-top: 0;
@@ -44,6 +43,8 @@ body {
     text-size-adjust: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    border-left: 4px solid #151419;
+    border-right: 4px solid #151419;
 }
 
 body::-webkit-scrollbar {
@@ -51,7 +52,7 @@ body::-webkit-scrollbar {
 }
 
 a {
-    color: #151f26;
+    color: #151419;
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
@@ -78,41 +79,11 @@ ul{
 .box-header{
     width: 100%;
 }
-
-.header {
-    background-color: #151f26;
-    margin: 0 auto;
-    width: 100%;
-    padding: 20px 0px;
-}
-
-.container-header {
-    display: flex;
-    margin: auto;
-    width: 100%;
-    max-width: 1460px;
-}
-
-.container-header p{
-    font-size: 36px;
-    color:#EAEAE7;
-    font-weight: 700;
-    margin: auto;
-    line-height: 100%;
-    padding: 0px 0px;
-}
-
-#dot-title{
-    color:#fec876;
-}
-
 /* Title Section */
 
 .section-title {
     margin: 0 auto;
     width: 100%;
-    /* padding: 20px 0px; */
-    border-bottom: 4px solid #151f26;
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -126,7 +97,7 @@ ul{
 .container-title{
     margin: auto;
     width: 100%;
-    max-width: 1460px;
+    /* max-width: 1920; */
 }
 
 ul.list-title{
@@ -135,14 +106,16 @@ ul.list-title{
     /* width: 100%; */
     display: flex;
     flex-direction: row;
-    padding: 0px 0px;
-    /* display: grid;
-    grid-template-columns: repeat(6, 1fr); */
-    /* background-color: #eaeae7; */
+    padding: 25px 50px 0px 0px;
+    float: right;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(5, auto);
+    /* background-color: #FBFBFB; */
 }
 
 .button {
-    background: #EAEAE7;
+    background: #FBFBFB;
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -159,49 +132,60 @@ ul.list-title{
 }
 
 .inner-box-title{
-    background-color: #EAEAE7;
-    color: #151f26;
+    background-color: #FBFBFB;
+    color: #151419;
     font-size: 24px;
-    font-weight: 700;
-    font-family: 'Outfit';
-    border-left: 0px solid #EAEAE7;
-    border-right: 4px solid #EAEAE7;
-    border-bottom: 0px solid #151f26;
-    border-top: 0px solid #151f26;
+    font-weight: 400;
+    font-family: "Alexandria", serif;
+    border: 0px solid #FBFBFB;
     cursor:pointer;
-    text-align: left;
-    padding: 20px 26px;
+    text-align: center;
+    /* width: 150px; */
+    /* margin-left: 50px; */
+    text-transform: uppercase;
 }
 
 #ptitdej:hover{
-    background-color: hsl(36, 99%, 83%) !important;
+    font-weight: 900 !important;
 }
 
 #gouter:hover{
-    background-color: hsl(30, 52%, 82%) !important;
-    /* border-left: 4px solid hsl(30, 52%, 82%) !important; */
+    font-weight: 900 !important;
 }
 
 #apero:hover{
-    background-color: hsl(68, 48%, 84%) !important;
-    /* border-left: 4px solid hsl(68, 48%, 84%) !important; */
+    font-weight: 900 !important;
 }
 
 #plat:hover{
-    background-color:hsl(11, 87%, 81%) !important;
-    /* border-left: 4px solid hsl(11, 87%, 81%) !important; */
+    font-weight: 900 !important;
 }
 
 #dessert:hover{
-    background-color: hsl(188, 41%, 77%) !important;
-    /* border-left: 4px solid hsl(188, 41%, 77%) !important; */
+    font-weight: 900 !important;
 }
 
 #ptitdej{
-    background-color: #fec876;
-    border-right: 4px solid #151f26;
-    border-left: 4px solid #151f26;
-    padding: 20px 26px;
+    font-weight: 900;
+}
+
+.container-list-title{
+    /* background-color: #FBFBFB; */
+    position: sticky;
+    top: 0;
+    padding-left: 50px;
+    margin: 0;
+    width: 100%;
+    /* max-width: 1920px; */
+}
+
+h1{
+    margin:0;
+    padding-top: 25px;
+    font-family: "Climate Crisis";
+    font-size: 128px;
+    color: #F56F10;
+    text-transform: uppercase;
 }
 
 /* Recipe part */
@@ -226,78 +210,51 @@ ul.list-title{
     height: 100%;
 }   
 
+
+
 .container-list-recipe{
     margin: auto;
     width: 100%;
-    max-width: 1460px;
+    padding-bottom: 50px;
+    /* max-width: 1920px; */
 }
 
 ul.recipe-inner-box{
     list-style: none;
-    padding: 60px 0px;
-    display: grid;
+    /* padding: 50px 0px; */
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
-    gap: 40px;
+    gap: 40px; */
     margin:auto;
-    justify-content: center;
+    justify-content: left;
+    border-bottom: 4px solid #151419;
 
 }
 
 .recipe-inner-box li{
     margin:auto; 
     display: table;
-    width: 200px;
-    max-width: 200px;
-    height: 200px;
-    max-height: 200px;
-    line-height: 100%;
-    border: 4px solid #D1D1CE;
+    width: 100%;
+    border-top: 4px solid #151419;
 }
 
 .recipe-inner-box a{
-    width: 160px;
-    max-width: 160px;
+    /* width: 160px;
+    max-width: 160px; */
     height: 160px;
     max-height: 160px;
-    padding: 20px;
+    padding-left: 50px;
     line-height: 100%;
     font-size: 30px;
-    font-weight: 600;
-    margin: auto;
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
     display: table-cell;
     vertical-align: middle;
     text-align: left;
 }
 
-mark{
-    background: none;
-}
-
-.recipe-inner-box li:hover{
-    border: 4px solid #151f26;
-}
-
-.section-recipe .recipe-plat{
-    width: 100%;
-    height: 100%;
-}
-
-.recipe-ptitdej li:hover{
-    background-color: #fec876;
-}
-
-.recipe-gouter li:hover{
-    background-color: #ddb792;
-}
-
-.recipe-apero li:hover{
-    background-color: #d5dd9d;
-}
-
-.recipe-plat li:hover{
-    background-color: #f58c74;
-}
-
-.recipe-dessert li:hover{
-    background-color: #8ac5ce;
+.recipe-inner-box a:hover{
+    background-color: #F56F10;
+    color: #FBFBFB;
 }

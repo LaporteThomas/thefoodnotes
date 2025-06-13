@@ -1,10 +1,11 @@
 
 from os import path
+from pathlib import Path
 
 def create_html_recipe(recipe, sectionId, color, recipePrevious, recipeNext):
     if path.isfile("./recette/" + sectionId + "/" + recipe.namefile + ".html") == False:
-        f = write_head("./recette/" + sectionId + "/" + recipe.namefile, color)
-        write_title(f, recipe.name, color)
+        f = write_head("./recette/" + sectionId + "/" + recipe.namefile)
+        write_title(f, recipe.name, sectionId)
         write_info(f, recipe.infos, color)
         write_ingredient_info(f, recipe.ingredient, color)
         write_recipe_step(f, recipe.step, color)
@@ -12,8 +13,10 @@ def create_html_recipe(recipe, sectionId, color, recipePrevious, recipeNext):
         end_html(f, recipe.source)
         f.close()
 
-def write_head(recipe, color):
-    f = open(recipe + ".html", "w", encoding='utf-8', errors='ignore')
+def write_head(recipe):
+    filename_path = Path(recipe + ".html")
+    filename_path.parent.mkdir(parents=True, exist_ok=True)
+    f = open(filename_path, "w", encoding='utf-8', errors='ignore')
     f.write("<!DOCTYPE html>\n")
     f.write("<html lang=\"en\">\n\n")
 
@@ -43,26 +46,37 @@ def write_head(recipe, color):
 
     return f
 
-def write_title(f, name, color):
+def write_title(f, name, sectionId):
+    ptitdej_text = "<span style=\"font-weight:900;\">p'tit-déj</span>" if sectionId == "ptitdej" else "p'tit-déj"
+    gouter_text = "<span style=\"font-weight:900;\">goûter</span>" if sectionId == "gouter" else "goûter"
+    apero_text = "<span style=\"font-weight:900;\">apéro</span>" if sectionId == "apero" else "apéro"
+    plat_text = "<span style=\"font-weight:900;\">plats</span>" if sectionId == "plat" else "plats"
+    dessert_text = "<span style=\"font-weight:900;\">desserts</span>" if sectionId == "dessert" else "desserts"
+    
     f.write("<body>\n\n")
 
     f.write("\t<div class=\"box\">\n")
-    f.write("\t\t<div id=\"header\" class=\"box-header\">\n")
-    f.write("\t\t\t<div class=\"header\">\n")
-    f.write("\t\t\t\t<a href=\"../../index.html\" class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<p>the food notes<span style=\"color:#" + color + ";\">.</span></p>\n")
-    f.write("\t\t\t\t</a>\n")
-    f.write("\t\t\t</div>\n")
+    f.write("\t\t<div class=\"box-header\">\n")
     f.write("\t\t\t<div class=\"section-title\">\n")
     f.write("\t\t\t\t<div class=\"container-title\">\n")
-    f.write("\t\t\t\t\t<h3></span>" +name+ "<mark style=\"color:#" + color + ";\">.</mark></span></h3>\n")
+    f.write("\t\t\t\t\t<ul class=\"list-title\">\n")
+    f.write("\t\t\t\t\t\t<li><a href=\"../../index.html#recipe-ptitdej-container\"><button id=\"ptitdej\" class=\"inner-box-title\">" + ptitdej_text + "</button></a></li>\n")
+    f.write("\t\t\t\t\t\t<li><a href=\"../../index.html#recipe-gouter-container\"><button id=\"gouter\" class=\"inner-box-title\">" + gouter_text + "</button></a></li>\n")
+    f.write("\t\t\t\t\t\t<li><a href=\"../../index.html#recipe-apero-container\"><button id=\"apero\" class=\"inner-box-title\">" + apero_text + "</button></a></li>\n")
+    f.write("\t\t\t\t\t\t<li><a href=\"../../index.html#recipe-plat-container\"><button id=\"plat\" class=\"inner-box-title\">" + plat_text + "</button></a></li>\n")
+    f.write("\t\t\t\t\t\t<li><a href=\"../../index.html#recipe-dessert-container\"><button id=\"dessert\" class=\"inner-box-title\">" + dessert_text + "</button></a></li>\n")
+    f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n\n")
 
+    f.write("\t\t<div class=\"container-list-title\">\n")
+    f.write("\t\t\t<h1></span  id=\"title-list\">" + name.upper() + "</span></h1>\n")
+    f.write("\t\t</div>\n\n")
+
 def write_info(f, infos, color):
     f.write("\t\t<div id=\"recipe\" class=\"box-recipe\">\n")
-    f.write("\t\t\t<div id=\"sectioninfo\" class=\"section-info\" style=\"background-color: #" + color + ";\">\n")
+    f.write("\t\t\t<div id=\"sectioninfo\" class=\"section-info\">\n")
     f.write("\t\t\t\t<div class=\"container-info\">\n")
     for index, (key, value) in enumerate(infos.items()):
             write_block_info(f, key, value)
@@ -77,7 +91,7 @@ def write_info(f, infos, color):
 
 def write_block_info(f, info_type, info_quantity):
     f.write("\t\t\t\t\t<div class=\"infos-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<p><span style=\"font-weight: 700;\">" + info_type + "</span><br>" + info_quantity + "</p>\n")
+    f.write("\t\t\t\t\t\t<p><span style=\"font-family: Climate Crisis;\">" + info_type.upper() + "</span><br>" + info_quantity.capitalize() + "</p>\n")
     f.write("\t\t\t\t\t</div>\n")
 
 
@@ -85,7 +99,7 @@ def write_ingredient_info(f, ingredient, color):
     f.write("\t\t\t<div id=\"sectioningredientrecipe\" class=\"section-ingredient-recipe\">\n")
     f.write("\t\t\t\t<div class=\"section-ingredient\">\n")
     f.write("\t\t\t\t\t<div id=\"ingredienttitleinnerbox\" class=\"ingredient-title-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<h2>les ingrédients<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t\t<h2>ingrédients</h2>\n")
     f.write("\t\t\t\t\t</div>\n")
     f.write("\t\t\t\t\t\t<ul id=\"ingredientlistinnerbox\" class=\"ingredient-list-inner-box\">\n")
 
@@ -109,7 +123,7 @@ def write_ingredient_info(f, ingredient, color):
 def write_recipe_step(f, recipe_step, color):
     f.write("\t\t\t\t<div class=\"section-recipe\">\n")
     f.write("\t\t\t\t\t<div id=\"recipetitleinnerbox\" class=\"recipe-title-inner-box\">\n")
-    f.write("\t\t\t\t\t\t<h2>la recette<span style=\"color:#" + color + ";\">.</span></h2>\n")
+    f.write("\t\t\t\t\t\t<h2>recette</h2>\n")
     f.write("\t\t\t\t\t</div>\n")
     f.write("\t\t\t\t\t<ol class=\"recipe-list-inner-box\" id=\"recipelistinnerbox\">\n")
 

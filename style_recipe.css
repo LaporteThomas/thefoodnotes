@@ -6,9 +6,8 @@
     IMPORT FONTS
 -------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -26,33 +25,34 @@
 -------------------------------------------------------------------*/
 html, body{
 	height: 100vh;
-    max-height: 100vh;
 }
 
 body {
-    background-color: #EAEAE7;
-    color: #151f26;
+    background-color: #FBFBFB;
+    color: #151419;
     /* font-size: 18px; */
-    font-family: 'Outfit';
+    font-family: "Alexandria", serif;
     line-height: 1.80857;
     width:100vw;
-    /* max-width: 800px; */
+    max-width: 1920px;
     margin-left:auto;
     margin-right:auto;
     margin-top: 0;
     margin-bottom: 0;
     overflow: hidden;
     text-size-adjust: auto;
-    /*-ms-overflow-style: none;*/  /* IE and Edge */
-    /*scrollbar-width: none;*/  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    border-left: 4px solid #151419;
+    border-right: 4px solid #151419;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
 
 a {
-    color: #151f26;
+    color: #151419;
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
@@ -72,48 +72,18 @@ ul{
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* max-width: 1460px; */
-    /* padding-left: 30px; */
-    /* padding-right: 30px; */
     height: 100vh;
-    /* border: 4px solid #151f26; */
   }
 
 /* Header */
 .box-header{
     width: 100%;
 }
-
-.header {
-    background-color: #151f26;
-    margin: 0 auto;
-    width: 100%;
-    padding: 20px 0px;
-}
-
-.container-header {
-    display: flex;
-    margin: auto;
-    width: 100%;
-    max-width: 1460px;
-}
-
-.container-header p{
-    font-size: 36px;
-    color:#EAEAE7;
-    font-weight: 700;
-    margin: auto;
-    line-height: 100%;
-    padding: 0px 0px;
-}
-
 /* Title Section */
 
 .section-title {
     margin: 0 auto;
     width: 100%;
-    /* padding: 20px 0px; */
-    border-bottom: 4px solid #151f26;
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -127,20 +97,91 @@ ul{
 .container-title{
     margin: auto;
     width: 100%;
-    max-width: 1460px;
+    /* max-width: 1920; */
 }
 
-.container-title h3{
-    font-size: 60px;
-    font-weight: 700;
-    padding: 20px 0px;
+ul.list-title{
+    list-style: none;
     margin: auto;
-    width: 100%;
-    max-width: 1460px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    padding: 25px 50px 0px 0px;
+    float: right;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(5, auto);
+    /* background-color: #FBFBFB; */
 }
 
-mark{
-    background: none;
+.button {
+    background: #FBFBFB;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: block;
+}
+
+.button:focus {
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.inner-box-title{
+    background-color: #FBFBFB;
+    color: #151419;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Alexandria", serif;
+    border: 0px solid #FBFBFB;
+    cursor:pointer;
+    text-align: center;
+    /* width: 150px; */
+    /* margin-left: 50px; */
+    text-transform: uppercase;
+}
+
+#ptitdej:hover{
+    font-weight: 900 !important;
+}
+
+#gouter:hover{
+    font-weight: 900 !important;
+}
+
+#apero:hover{
+    font-weight: 900 !important;
+}
+
+#plat:hover{
+    font-weight: 900 !important;
+}
+
+#dessert:hover{
+    font-weight: 900 !important;
+}
+
+.container-list-title{
+    /* background-color: #FBFBFB; */
+    position: sticky;
+    top: 0;
+    padding-left: 50px;
+    margin: 0;
+    /* width: 100%; */
+    /* max-width: 1920px; */
+}
+
+h1{
+    margin:0;
+    padding-top: 25px;
+    font-family: "Climate Crisis";
+    font-size: 128px;
+    color: #F56F10;
+    text-transform: uppercase;
 }
 
 /* Recipe Section */
@@ -156,26 +197,23 @@ mark{
 /* Info part */
 .section-info{
     display: flex;
-    margin: 0 auto 0 auto;
-    width: 100%;
-    border-bottom: 4px solid #151f26;
-    padding: 20px 0px;
+    left: 0;
+    /* width: 100%; */
+    border-bottom: 4px solid #151419;
+    border-top: 4px solid #151419;
+    padding: 20px 50px;
     height: fit-content;
     /* max-width: 1460px; */
 }
 
 .container-info{
-    margin: auto;
     width: 100%;
-    max-width: 1460px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
 .infos-inner-box{
     width: 100%;
-    max-width: 1460px;
-    /* display: flex; */
     text-align: left;
     margin:0;
 }
@@ -192,10 +230,8 @@ mark{
     display: flex;
     flex-direction: row;
     margin: auto;
-    width: 100%;
-    max-width: 1460px;
-    padding-top: 60px;
-    /* padding-bottom: 120px; */
+    /* width: 100%; */
+    padding: 50px;
 }
 
 .section-ingredient{
@@ -214,9 +250,11 @@ mark{
 
 .ingredient-title-inner-box h2{
     font-size: 36px;
-	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
+    font-family: "Climate Crisis";
+    color: #F56F10;
+    text-transform: uppercase;
 }
 
 .ingredient-list-inner-box{
@@ -237,14 +275,15 @@ mark{
 }
 
 .ingredient-list-inner-box li{ 
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 900;
     line-height: 150%;
     padding-bottom: 10px;
 }
 
 /* recipe part */
 .section-recipe{
+    padding-left: 50px;
     display: block;
     position: static;
     width: 67%;
@@ -264,9 +303,11 @@ mark{
 
 .recipe-title-inner-box h2{
     font-size: 36px;
-	font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
+    font-family: "Climate Crisis";
+    color: #F56F10;
+    text-transform: uppercase;
 }
 
 .recipe-list-inner-box{
@@ -289,20 +330,20 @@ mark{
 
 .recipe-list-inner-box li{ 
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 150%;
     padding-bottom: 10px;
 }
 
 .section-list-recipe{
-    background-color: #151f26;
+    background-color: #151419;
 }
 
 .container-list-recipe{
     display: grid;
     grid-template-columns: repeat(2, auto);
     width: 100%;
-    max-width: 1460px;
+    /* max-width: 1460px; */
     color: #EAEAE7;
     margin: auto;
 }
@@ -320,13 +361,13 @@ mark{
 
 .recipe-previous{
     display: flex;
-    align-items:center;
     justify-content:left;
 }
 
 .recipe-previous h2{
     font-size: 24px;
 	font-weight: 500;
+    padding-left: 50px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 0;
@@ -335,7 +376,6 @@ mark{
 
 .recipe-next{
     display: flex;
-    align-items:center;
     justify-content:right;
 }
 
@@ -345,25 +385,26 @@ mark{
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 0;
+    padding-right: 50px;
     /* padding-right: 0.5vw; */
 }
 
 .recipe-ptitdej h2:hover{
-    color: #fec876;
+    color: #F56F10;
 }
 
 .recipe-gouter h2:hover{
-    color: #ddb792;
+    color: #F56F10;
 }
 
 .recipe-apero h2:hover{
-    color: #d5dd9d;
+    color: #F56F10;
 }
 
 .recipe-plat h2:hover{
-    color: #f58c74;
+    color: #F56F10;
 }
 
 .recipe-dessert h2:hover{
-    color: #8ac5ce;
+    color: #F56F10;
 }

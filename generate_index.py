@@ -1,8 +1,7 @@
 import recipe
-from operator import attrgetter
 import generate_recipe
 
-def write_head():
+def write_head_header():
     f = open("index.html", "w", encoding='utf-8', errors='ignore')
     f.write("<!DOCTYPE html>\n")
     f.write("<html lang=\"en\">\n\n")
@@ -30,33 +29,30 @@ def write_head():
     f.write("\t<link rel=\"stylesheet\" href=\"css/responsive.css\">\n\n")
 
     f.write("</head>\n")
-    return f
 
-def write_header(f):
     f.write("<body>\n\n")
 
     f.write("\t<div class=\"box\">\n")
     f.write("\t\t<div class=\"box-header\">\n")
-    f.write("\t\t\t<div id=\"header\" class=\"header\">\n")
-    f.write("\t\t\t\t<div class=\"container-header\">\n")
-    f.write("\t\t\t\t\t<p>the food notes<span id=\"dot-title\">.</span></p>\n")
-    f.write("\t\t\t\t</div>\n")
-    f.write("\t\t\t</div>\n\n")
-
-def write_section_title(f):
     f.write("\t\t\t<div class=\"section-title\">\n")
     f.write("\t\t\t\t<div class=\"container-title\">\n")
     f.write("\t\t\t\t\t<ul class=\"list-title\">\n")
-    f.write("\t\t\t\t\t\t<li><button id=\"ptitdej\" class=\"inner-box-title\">le petit-déjeuner.</button></li>\n")
-    f.write("\t\t\t\t\t\t<li><button id=\"gouter\" class=\"inner-box-title\">le goûter.</button></li>\n")
-    f.write("\t\t\t\t\t\t<li><button id=\"apero\" class=\"inner-box-title\">l'apéro.</button></li>\n")
-    f.write("\t\t\t\t\t\t<li><button id=\"plat\" class=\"inner-box-title\">les plats.</button></li>\n")
-    f.write("\t\t\t\t\t\t<li><button id=\"dessert\" class=\"inner-box-title\">les desserts.</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"ptitdej\" class=\"inner-box-title\">p'tit-déj</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"gouter\" class=\"inner-box-title\">goûter</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"apero\" class=\"inner-box-title\">apéro</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"plat\" class=\"inner-box-title\">plats</button></li>\n")
+    f.write("\t\t\t\t\t\t<li><button id=\"dessert\" class=\"inner-box-title\">desserts</button></li>\n")
     f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div>\n")
     f.write("\t\t\t</div>\n")
     f.write("\t\t</div>\n\n")
+
+    f.write("\t\t\t<div class=\"container-list-title\">\n")
+    f.write("\t\t\t\t<h1><span id=\"title-list\">p'tit-déj</span></h1>\n")
+    f.write("\t\t\t</div>\n\n")
+
     f.write("\t\t<div class=\"box-list\">\n")
+    return f
 
 def write_recipe_section(f, sectionId, recipes, color):
 
@@ -64,6 +60,7 @@ def write_recipe_section(f, sectionId, recipes, color):
         f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: block;\">\n")
     else:
         f.write("\t\t\t<div id=\"recipe-"+ sectionId + "-container\" class=\"section-recipe recipe-" + sectionId + "\" style=\"display: none;\">\n")
+    
     f.write("\t\t\t\t<div class=\"container-list-recipe\">\n")
     f.write("\t\t\t\t\t<ul class=\"recipe-inner-box\">\n")
 
@@ -71,7 +68,7 @@ def write_recipe_section(f, sectionId, recipes, color):
     for r in recipes:
         generate_recipe.create_html_recipe(r, sectionId, color, recipes[index - 1], recipes[(index + 1)%len(recipes)])
         index += 1
-        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\"><span>"+ r.name + "<mark style=\"color:#" + color + ";\">.</mark></span></a></li>\n")
+        f.write("\t\t\t\t\t\t<li><a href=\"./recette/" + sectionId + "/" + r.namefile + ".html\">"+ r.name + "</a></li>\n")
 
     f.write("\t\t\t\t\t</ul>\n")
     f.write("\t\t\t\t</div><!-- end container -->\n")
@@ -93,23 +90,21 @@ def end_html(f):
     f.close()
 
 if __name__ == '__main__':
-    f = write_head()
-    write_header(f)
-    write_section_title(f)
+    f = write_head_header()
 
-    list_ptitdej = recipe.sort_list(recipe.read_csv_recipe("ptitdej.csv"))
+    list_ptitdej = recipe.sort_list(recipe.read_csv_recipe("data/ptitdej.csv"))
     write_recipe_section(f, "ptitdej", list_ptitdej, "fec876")
     
-    list_gouter = recipe.sort_list(recipe.read_csv_recipe("gouter.csv"))
+    list_gouter = recipe.sort_list(recipe.read_csv_recipe("data/gouter.csv"))
     write_recipe_section(f, "gouter", list_gouter, "ddb792")
 
-    list_apero = recipe.sort_list(recipe.read_csv_recipe("apero.csv"))
+    list_apero = recipe.sort_list(recipe.read_csv_recipe("data/apero.csv"))
     write_recipe_section(f, "apero", list_apero, "d5dd9d")
 
-    list_plat = recipe.sort_list(recipe.read_csv_recipe("plat.csv"))
+    list_plat = recipe.sort_list(recipe.read_csv_recipe("data/plat.csv"))
     write_recipe_section(f, "plat", list_plat, "f58c74")
 
-    list_dessert = recipe.sort_list(recipe.read_csv_recipe("dessert.csv"))
+    list_dessert = recipe.sort_list(recipe.read_csv_recipe("data/dessert.csv"))
     write_recipe_section(f, "dessert", list_dessert, "8ac5ce")
     
     end_html(f)
