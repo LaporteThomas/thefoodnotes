@@ -136,3 +136,60 @@ function toggle_element(x, color){
     document.getElementById(x).style.fontWeight = 900;   
     return true;
 }
+
+function showSectionFromHash() {
+    const hash = window.location.hash;
+    if (hash) {
+        // Hide all sections first
+        $('.section-recipe').hide();
+        
+        // Show the section from hash
+        $(hash).show();
+        
+        // Update the title
+        const sectionId = hash.replace('#recipe-', '').replace('-container', '');
+        document.getElementById("title-list").textContent = sectionId;
+        
+        // Update button states
+        $('.inner-box-title').css('font-weight', '400');
+        $('#' + sectionId).css('font-weight', '900');
+        
+        // Update the corresponding count variables
+        countButtonPtitDej = (sectionId === 'ptitdej');
+        countButtonGouter = (sectionId === 'gouter');
+        countButtonApero = (sectionId === 'apero');
+        countButtonPlat = (sectionId === 'plat');
+        countButtonDessert = (sectionId === 'dessert');
+    }
+}
+
+// Function to update URL hash
+function updateHash(sectionId) {
+    window.location.hash = `#recipe-${sectionId}-container`;
+}
+
+// Call the function when the page loads
+$(document).ready(function() {
+    showSectionFromHash();
+
+    // Update click handlers for buttons
+    $("#ptitdej").on("click", function() {
+        updateHash('ptitdej');
+    });
+
+    $("#gouter").on("click", function() {
+        updateHash('gouter');
+    });
+
+    $("#apero").on("click", function() {
+        updateHash('apero');
+    });
+
+    $("#plat").on("click", function() {
+        updateHash('plat');
+    });
+
+    $("#dessert").on("click", function() {
+        updateHash('dessert');
+    });
+});

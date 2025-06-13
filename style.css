@@ -169,6 +169,25 @@ ul.list-title{
     font-weight: 900;
 }
 
+.container-list-title{
+    /* background-color: #FBFBFB; */
+    position: sticky;
+    top: 0;
+    padding-left: 50px;
+    margin: 0;
+    width: 100%;
+    /* max-width: 1920px; */
+}
+
+h1{
+    margin:0;
+    padding-top: 25px;
+    font-family: "Climate Crisis";
+    font-size: 128px;
+    color: #F56F10;
+    text-transform: uppercase;
+}
+
 /* Recipe part */
 .box-list{
     display: flex;
@@ -191,24 +210,7 @@ ul.list-title{
     height: 100%;
 }   
 
-.container-list-title{
-    /* background-color: #FBFBFB; */
-    position: sticky;
-    top: 0;
-    padding-left: 50px;
-    margin: 0;
-    width: 100%;
-    /* max-width: 1920px; */
-}
 
-h1{
-    margin:0;
-    padding-top: 25px;
-    font-family: "Climate Crisis";
-    font-size: 128px;
-    color: #F56F10;
-    text-transform: uppercase;
-}
 
 .container-list-recipe{
     margin: auto;
